@@ -1,0 +1,6756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#090015">
+
+<title>Nidhu Dance Universe ✦</title>
+
+<style>
+
+/* =========================================================
+   NIDHU DANCE UNIVERSE
+   SMOOTH PREMIUM PURPLE + PINK EDITION
+========================================================= */
+
+:root{
+    --bg:#08000f;
+    --bg2:#11001d;
+
+    --purple:#9d63ff;
+    --purple2:#7137e8;
+    --pink:#ff55b7;
+    --pink2:#ff79d0;
+
+    --gold:#ffd866;
+    --gold2:#fff0a6;
+
+    --cyan:#69e8ff;
+    --green:#61f4bd;
+
+    --text:#fff;
+    --muted:#b5aabd;
+
+    --glass:rgba(255,255,255,.065);
+    --border:rgba(255,255,255,.12);
+
+    --radius:24px;
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+
+    color:var(--text);
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(159,82,255,.34),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(255,61,178,.28),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(113,43,221,.18),
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at 20% 80%,
+            rgba(255,66,180,.18),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            #090012 0%,
+            #12001e 38%,
+            #090013 72%,
+            #050008 100%
+        );
+
+    background-attachment:fixed;
+}
+
+/* Soft static purple/pink atmosphere */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    z-index:-3;
+    pointer-events:none;
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            rgba(166,83,255,.15),
+            transparent 24%
+        ),
+        radial-gradient(
+            circle at 75% 60%,
+            rgba(255,75,184,.12),
+            transparent 25%
+        );
+
+    animation:
+        atmosphere 12s ease-in-out infinite alternate;
+}
+
+@keyframes atmosphere{
+    from{
+        opacity:.65;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:9998;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.012) 50%,
+            transparent 50%
+        );
+
+    background-size:
+        100% 5px;
+
+    opacity:.12;
+}
+
+button,
+input,
+textarea{
+    font:inherit;
+}
+
+button{
+    border:0;
+    cursor:pointer;
+}
+
+img{
+    max-width:100%;
+}
+
+/* =========================================================
+   LIGHT PARTICLES
+========================================================= */
+
+#particles{
+    position:fixed;
+    inset:0;
+
+    z-index:-2;
+
+    pointer-events:none;
+
+    overflow:hidden;
+}
+
+.particle{
+    position:absolute;
+
+    width:2px;
+    height:2px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    opacity:.3;
+
+    animation:
+        floatParticle 12s linear infinite;
+}
+
+@keyframes floatParticle{
+
+    from{
+        transform:
+            translate3d(0,105vh,0);
+    }
+
+    to{
+        transform:
+            translate3d(0,-10vh,0);
+    }
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar{
+    position:fixed;
+
+    top:12px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:min(94%,920px);
+
+    z-index:1000;
+
+    padding:9px 10px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    border-radius:100px;
+
+    background:
+        rgba(10,0,20,.72);
+
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,.3),
+        0 0 30px rgba(156,77,255,.08);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+
+    gap:8px;
+
+    padding-left:8px;
+
+    font-size:11px;
+    font-weight:950;
+    letter-spacing:1px;
+}
+
+.logoIcon{
+    width:30px;
+    height:30px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            var(--pink)
+        );
+
+    box-shadow:
+        0 0 18px rgba(210,80,255,.35);
+}
+
+.navLinks{
+    display:flex;
+    gap:3px;
+}
+
+.navLinks button{
+    padding:8px 11px;
+
+    border-radius:100px;
+
+    background:transparent;
+
+    color:#aaa2b6;
+
+    font-size:9px;
+    font-weight:850;
+
+    transition:
+        color .2s,
+        background .2s;
+}
+
+.navLinks button:hover{
+    color:#fff;
+
+    background:
+        rgba(255,255,255,.08);
+}
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+.container{
+    width:min(1120px,92%);
+    margin:auto;
+}
+
+section{
+    position:relative;
+
+    padding:
+        95px 0;
+}
+
+.sectionHeader{
+    text-align:center;
+
+    margin-bottom:38px;
+}
+
+.eyebrow{
+    color:var(--gold);
+
+    font-size:10px;
+
+    font-weight:950;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:11px;
+}
+
+.sectionTitle{
+    font-size:
+        clamp(36px,8vw,66px);
+
+    line-height:1;
+
+    font-weight:1000;
+
+    letter-spacing:-2.5px;
+
+    text-shadow:
+        0 0 30px rgba(186,93,255,.12);
+}
+
+.sectionDescription{
+    max-width:650px;
+
+    margin:17px auto 0;
+
+    color:var(--muted);
+
+    font-size:
+        clamp(14px,3.5vw,17px);
+
+    line-height:1.7;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:100vh;
+
+    padding-top:145px;
+    padding-bottom:75px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+    height:650px;
+
+    left:50%;
+    top:3%;
+
+    transform:translateX(-50%);
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(149,74,255,.23),
+            rgba(255,66,180,.10) 40%,
+            transparent 70%
+        );
+
+    pointer-events:none;
+}
+
+.heroBadge{
+    padding:9px 16px;
+
+    border-radius:100px;
+
+    color:var(--gold2);
+
+    background:
+        rgba(255,215,100,.06);
+
+    border:
+        1px solid rgba(255,215,100,.25);
+
+    font-size:9px;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+}
+
+.heroTitle{
+    margin-top:23px;
+
+    font-size:
+        clamp(53px,14vw,125px);
+
+    line-height:.84;
+
+    font-weight:1000;
+
+    letter-spacing:-6px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #fff 0%,
+            #d6a9ff 25%,
+            #ff7dcc 48%,
+            #ffd96b 68%,
+            #fff 100%
+        );
+
+    background-size:200% auto;
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+
+    animation:
+        titleFlow 7s linear infinite;
+}
+
+.heroTitle span{
+    font-size:.55em;
+    letter-spacing:-2px;
+}
+
+@keyframes titleFlow{
+
+    0%{
+        background-position:0 center;
+    }
+
+    100%{
+        background-position:200% center;
+    }
+}
+
+.heroQuote{
+    margin-top:23px;
+
+    color:#d0c6da;
+
+    font-size:
+        clamp(16px,4vw,21px);
+
+    line-height:1.75;
+}
+
+/* =========================================================
+   PHOTO FRAME
+========================================================= */
+
+.nidhuPhotoFrame{
+    position:relative;
+
+    width:min(88vw,430px);
+
+    margin:40px auto 24px;
+
+    text-align:center;
+}
+
+.frameGlow{
+    position:absolute;
+
+    inset:-25px;
+
+    border-radius:38px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,190,76,.28),
+            rgba(255,70,190,.12),
+            transparent 70%
+        );
+
+    opacity:.9;
+
+    animation:
+        glowPulse 4s ease-in-out infinite;
+
+    pointer-events:none;
+}
+
+@keyframes glowPulse{
+
+    0%,100%{
+        opacity:.55;
+        transform:scale(.97);
+    }
+
+    50%{
+        opacity:.9;
+        transform:scale(1.02);
+    }
+}
+
+.frameOuter{
+    position:relative;
+
+    padding:8px;
+
+    border-radius:30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff4a5,
+            #d5981e,
+            #fff0a0,
+            #8e5b0b,
+            #ffe77a,
+            #c88b18
+        );
+
+    box-shadow:
+        0 0 12px rgba(255,215,90,.75),
+        0 0 35px rgba(255,180,60,.28);
+
+    animation:
+        frameGlow 4s ease-in-out infinite;
+}
+
+@keyframes frameGlow{
+
+    0%,100%{
+        box-shadow:
+            0 0 12px rgba(255,215,90,.65),
+            0 0 32px rgba(255,180,60,.22);
+    }
+
+    50%{
+        box-shadow:
+            0 0 18px rgba(255,235,120,.95),
+            0 0 45px rgba(255,180,60,.35);
+    }
+}
+
+.frameInner{
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    background:#050509;
+}
+
+#nidhuHeroPhoto{
+    display:block;
+
+    width:100%;
+
+    aspect-ratio:1 / 1.15;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    filter:
+        saturate(1.08)
+        contrast(1.04);
+
+    transform:translateZ(0) scale(1.01);
+
+    transition:
+        transform .5s ease;
+}
+
+.nidhuPhotoFrame:hover #nidhuHeroPhoto{
+    transform:
+        translateZ(0)
+        scale(1.04);
+}
+
+.photoShine{
+    position:absolute;
+
+    top:-20%;
+    bottom:-20%;
+
+    left:-100%;
+
+    width:55%;
+
+    background:
+        linear-gradient(
+            100deg,
+            transparent,
+            rgba(255,255,255,.35),
+            transparent
+        );
+
+    transform:skewX(-18deg);
+
+    animation:
+        photoShine 5s ease-in-out infinite;
+
+    pointer-events:none;
+}
+
+@keyframes photoShine{
+
+    0%,45%{
+        left:-100%;
+    }
+
+    75%,100%{
+        left:150%;
+    }
+}
+
+.photoCorner{
+    position:absolute;
+
+    width:34px;
+    height:34px;
+
+    z-index:5;
+
+    border-color:#ffe789;
+
+    filter:
+        drop-shadow(
+            0 0 5px #ffd75c
+        );
+}
+
+.topLeft{
+    top:12px;
+    left:12px;
+
+    border-top:2px solid;
+    border-left:2px solid;
+}
+
+.topRight{
+    top:12px;
+    right:12px;
+
+    border-top:2px solid;
+    border-right:2px solid;
+}
+
+.bottomLeft{
+    bottom:12px;
+    left:12px;
+
+    border-bottom:2px solid;
+    border-left:2px solid;
+}
+
+.bottomRight{
+    bottom:12px;
+    right:12px;
+
+    border-bottom:2px solid;
+    border-right:2px solid;
+}
+
+.photoCaption{
+    margin-top:15px;
+
+    color:#f6dc7d;
+
+    font-size:10px;
+
+    font-weight:900;
+
+    letter-spacing:3px;
+}
+
+.photoCaption span{
+    margin:0 8px;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.heroButtons{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin-top:25px;
+}
+
+.glowBtn{
+    position:relative;
+
+    overflow:hidden;
+
+    padding:14px 21px;
+
+    border-radius:100px;
+
+    color:#fff;
+
+    font-size:11px;
+
+    font-weight:900;
+
+    transition:
+        transform .2s,
+        box-shadow .2s;
+}
+
+.glowBtn::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:70%;
+    height:100%;
+
+    background:
+        linear-gradient(
+            100deg,
+            transparent,
+            rgba(255,255,255,.42),
+            transparent
+        );
+
+    transform:skewX(-20deg);
+
+    animation:
+        buttonShine 5s ease-in-out infinite;
+}
+
+@keyframes buttonShine{
+
+    0%,65%{
+        left:-120%;
+    }
+
+    90%,100%{
+        left:160%;
+    }
+}
+
+.glowBtn:hover{
+    transform:translateY(-3px);
+}
+
+.glowBtn.primary{
+    color:#160b18;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd85f,
+            #ff78c8
+        );
+
+    box-shadow:
+        0 0 20px rgba(255,120,200,.18);
+}
+
+.glowBtn.secondary{
+    background:
+        rgba(255,255,255,.065);
+
+    border:
+        1px solid rgba(255,255,255,.14);
+
+    box-shadow:
+        0 0 20px rgba(147,82,255,.12);
+}
+
+/* =========================================================
+   GLASS
+========================================================= */
+
+.glass{
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.075),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid rgba(255,255,255,.105);
+
+    border-radius:var(--radius);
+
+    box-shadow:
+        0 20px 55px rgba(0,0,0,.28);
+
+    backdrop-filter:blur(13px);
+    -webkit-backdrop-filter:blur(13px);
+}
+
+/* =========================================================
+   DANCE FILTER
+========================================================= */
+
+.filterBar{
+    display:flex;
+
+    gap:8px;
+
+    overflow-x:auto;
+
+    padding:5px;
+
+    margin-bottom:28px;
+
+    scrollbar-width:none;
+}
+
+.filterBar::-webkit-scrollbar{
+    display:none;
+}
+
+.filterBtn{
+    flex:none;
+
+    padding:10px 16px;
+
+    border-radius:100px;
+
+    background:
+        rgba(255,255,255,.05);
+
+    border:
+        1px solid rgba(255,255,255,.07);
+
+    color:#aaa3b4;
+
+    font-size:10px;
+
+    font-weight:900;
+}
+
+.filterBtn.active,
+.filterBtn:hover{
+    color:#160c18;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold),
+            var(--pink)
+        );
+
+    box-shadow:
+        0 0 18px rgba(255,100,190,.15);
+}
+
+/* =========================================================
+   DANCE GRID
+========================================================= */
+
+.danceGrid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(145px,1fr)
+        );
+
+    gap:13px;
+}
+
+.danceCard{
+    position:relative;
+
+    min-height:190px;
+
+    padding:18px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    border-radius:22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.07),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid rgba(255,255,255,.09);
+
+    transition:
+        transform .22s ease,
+        border-color .22s ease;
+}
+
+.danceCard::before{
+    content:"";
+
+    position:absolute;
+
+    width:100px;
+    height:100px;
+
+    right:-35px;
+    top:-35px;
+
+    border-radius:50%;
+
+    background:
+        var(--accent);
+
+    opacity:.10;
+}
+
+.danceCard:hover{
+    transform:translateY(-5px);
+
+    border-color:
+        rgba(255,215,106,.32);
+}
+
+.danceIcon{
+    width:48px;
+    height:48px;
+
+    display:grid;
+    place-items:center;
+
+    margin-bottom:16px;
+
+    border-radius:15px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    font-size:24px;
+}
+
+.danceCard h3{
+    font-size:17px;
+}
+
+.danceCategory{
+    margin-top:5px;
+
+    color:#9993a5;
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:1.3px;
+
+    text-transform:uppercase;
+}
+
+.danceBpm{
+    position:absolute;
+
+    right:15px;
+    bottom:15px;
+
+    color:#96909f;
+
+    font-size:9px;
+
+    font-weight:800;
+}
+
+/* =========================================================
+   AI STUDIO
+========================================================= */
+
+.aiStudio{
+    display:grid;
+
+    grid-template-columns:
+        1fr 1.15fr;
+
+    gap:18px;
+}
+
+.teacherPanel{
+    padding:25px;
+}
+
+.teacherTop{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.teacherTitle{
+    font-size:20px;
+
+    font-weight:950;
+}
+
+.teacherStatus{
+    color:var(--green);
+
+    font-size:9px;
+
+    font-weight:900;
+}
+
+.teacherAvatarWrap{
+    display:flex;
+
+    justify-content:center;
+
+    margin:22px 0;
+}
+
+.teacherAvatar{
+    position:relative;
+
+    width:180px;
+    height:210px;
+
+    display:grid;
+    place-items:center;
+
+    overflow:hidden;
+
+    border-radius:
+        90px 90px 45px 45px;
+
+    background:
+        radial-gradient(
+            circle at 50% 25%,
+            rgba(255,255,255,.12),
+            rgba(126,75,255,.18) 45%,
+            rgba(0,0,0,.2)
+        );
+
+    border:
+        1px solid rgba(255,255,255,.14);
+
+    box-shadow:
+        0 0 35px rgba(141,77,255,.18);
+}
+
+.avatarEmoji{
+    font-size:82px;
+
+    animation:
+        teacherMove 2.8s ease-in-out infinite;
+}
+
+@keyframes teacherMove{
+
+    0%,100%{
+        transform:
+            translateY(2px)
+            rotate(-2deg);
+    }
+
+    50%{
+        transform:
+            translateY(-6px)
+            rotate(3deg);
+    }
+}
+
+.teacherMessage{
+    padding:15px;
+
+    border-radius:17px;
+
+    background:
+        rgba(255,255,255,.045);
+
+    border:
+        1px solid rgba(255,255,255,.07);
+
+    color:#d7d1df;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    text-align:center;
+}
+
+.teacherControls{
+    display:flex;
+
+    gap:8px;
+
+    flex-wrap:wrap;
+
+    margin-top:15px;
+}
+
+.smallBtn{
+    padding:10px 13px;
+
+    border-radius:12px;
+
+    color:#d8d2e1;
+
+    background:
+        rgba(255,255,255,.055);
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    font-size:10px;
+
+    font-weight:800;
+}
+
+.feedbackLabel{
+    margin-bottom:10px;
+
+    color:#aaa3b3;
+
+    font-size:11px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+}
+
+.avatarGrid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:8px;
+}
+
+.avatarChoice{
+    min-height:65px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:15px;
+
+    color:white;
+
+    background:
+        rgba(255,255,255,.05);
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    font-size:30px;
+}
+
+.avatarChoice.selected{
+    border-color:var(--gold);
+
+    box-shadow:
+        0 0 18px rgba(255,215,100,.12);
+}
+
+.uploadBox{
+    margin-top:15px;
+
+    padding:15px;
+
+    border:
+        1px dashed rgba(255,255,255,.15);
+
+    border-radius:16px;
+
+    color:#aaa3b3;
+
+    text-align:center;
+
+    font-size:11px;
+}
+
+.uploadBox input{
+    width:100%;
+    margin-top:10px;
+}
+
+/* =========================================================
+   CAMERA
+========================================================= */
+
+.cameraPanel{
+    padding:15px;
+}
+
+.cameraViewport{
+    position:relative;
+
+    min-height:480px;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(106,52,190,.2),
+            #05040a 70%
+        );
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+        0 0 35px rgba(114,65,220,.16);
+}
+
+#video{
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transform:scaleX(-1);
+
+    background:#050509;
+}
+
+.cameraPlaceholder{
+    position:absolute;
+
+    inset:0;
+
+    z-index:3;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#858090;
+}
+
+.cameraPlaceholderIcon{
+    font-size:55px;
+    opacity:.5;
+}
+
+.cameraPlaceholder p{
+    font-size:11px;
+}
+
+/* =========================================================
+   AI SKELETON
+========================================================= */
+
+.aiPoseOverlay{
+    position:absolute;
+
+    inset:0;
+
+    z-index:8;
+
+    pointer-events:none;
+}
+
+.poseSkeleton{
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    filter:
+        drop-shadow(
+            0 0 5px rgba(105,220,255,.8)
+        );
+}
+
+.bone{
+    fill:none;
+
+    stroke:
+        rgba(125,229,255,.95);
+
+    stroke-width:7;
+
+    stroke-linecap:round;
+
+    stroke-linejoin:round;
+
+    stroke-dasharray:
+        12 5;
+
+    animation:
+        boneFlow 1.2s linear infinite;
+}
+
+.bone.thin{
+    stroke-width:5;
+}
+
+@keyframes boneFlow{
+
+    to{
+        stroke-dashoffset:-34;
+    }
+}
+
+.joint{
+    position:absolute;
+
+    width:14px;
+    height:14px;
+
+    transform:
+        translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:
+        #dfffff;
+
+    box-shadow:
+        0 0 5px #fff,
+        0 0 13px #5deaff,
+        0 0 22px #628cff;
+
+    animation:
+        jointPulse 1s ease-in-out infinite;
+}
+
+@keyframes jointPulse{
+
+    0%,100%{
+        transform:
+            translate(-50%,-50%)
+            scale(.8);
+    }
+
+    50%{
+        transform:
+            translate(-50%,-50%)
+            scale(1.15);
+    }
+}
+
+.head{
+    left:50%;
+    top:17.5%;
+
+    width:24px;
+    height:24px;
+}
+
+.shoulderL{
+    left:36%;
+    top:25%;
+}
+
+.shoulderR{
+    left:64%;
+    top:25%;
+}
+
+.elbowL{
+    left:26%;
+    top:34%;
+}
+
+.elbowR{
+    left:74%;
+    top:34%;
+}
+
+.wristL{
+    left:18%;
+    top:46%;
+}
+
+.wristR{
+    left:82%;
+    top:46%;
+}
+
+.hipL{
+    left:40%;
+    top:55%;
+}
+
+.hipR{
+    left:60%;
+    top:55%;
+}
+
+.kneeL{
+    left:31%;
+    top:70%;
+}
+
+.kneeR{
+    left:69%;
+    top:70%;
+}
+
+.ankleL{
+    left:24%;
+    top:89%;
+}
+
+.ankleR{
+    left:76%;
+    top:89%;
+}
+
+.aiTrackingStatus{
+    position:absolute;
+
+    top:15px;
+    left:15px;
+
+    z-index:15;
+
+    padding:9px 13px;
+
+    border-radius:100px;
+
+    background:
+        rgba(5,5,18,.7);
+
+    border:
+        1px solid rgba(105,220,255,.3);
+
+    color:#bdf6ff;
+
+    font-size:9px;
+
+    font-weight:900;
+
+    letter-spacing:1.2px;
+}
+
+.trackingDot{
+    display:inline-block;
+
+    width:7px;
+    height:7px;
+
+    margin-right:7px;
+
+    border-radius:50%;
+
+    background:#55f5d1;
+
+    box-shadow:
+        0 0 8px #55f5d1;
+
+    animation:
+        trackingBlink .8s infinite;
+}
+
+@keyframes trackingBlink{
+
+    50%{
+        opacity:.3;
+    }
+}
+
+/* =========================================================
+   CAMERA HUD
+========================================================= */
+
+.cameraHud{
+    position:absolute;
+
+    left:14px;
+    right:14px;
+    bottom:14px;
+
+    z-index:20;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:7px;
+}
+
+.hudItem{
+    padding:10px;
+
+    text-align:center;
+
+    border-radius:14px;
+
+    background:
+        rgba(5,5,15,.68);
+
+    border:
+        1px solid rgba(255,255,255,.1);
+
+    backdrop-filter:blur(10px);
+}
+
+.hudValue{
+    font-size:18px;
+    font-weight:950;
+}
+
+.hudLabel{
+    color:#aaa3b3;
+
+    font-size:8px;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+}
+
+.cameraControls{
+    display:flex;
+
+    gap:8px;
+
+    margin-top:12px;
+}
+
+.cameraControls button{
+    flex:1;
+}
+
+/* =========================================================
+   COUNT
+========================================================= */
+
+.countStudio{
+    margin-top:18px;
+
+    padding:20px;
+}
+
+.countNumber{
+    text-align:center;
+
+    font-size:
+        clamp(65px,15vw,105px);
+
+    line-height:1;
+
+    font-weight:1000;
+
+    background:
+        linear-gradient(
+            120deg,
+            white,
+            var(--gold),
+            var(--pink)
+        );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+}
+
+.countInstruction{
+    margin-top:10px;
+
+    text-align:center;
+
+    color:#c7c0d2;
+
+    font-size:15px;
+}
+
+.countButtons{
+    display:flex;
+
+    justify-content:center;
+
+    gap:8px;
+
+    margin-top:18px;
+}
+
+/* =========================================================
+   METRICS
+========================================================= */
+
+.metrics{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:10px;
+
+    margin-top:15px;
+}
+
+.metric{
+    padding:15px;
+
+    text-align:center;
+}
+
+.metricValue{
+    font-size:25px;
+    font-weight:1000;
+}
+
+.metricName{
+    color:#9992a5;
+
+    font-size:9px;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+}
+
+/* =========================================================
+   ACHIEVEMENTS
+========================================================= */
+
+.achievementGrid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(180px,1fr));
+
+    gap:12px;
+}
+
+.achievement{
+    padding:22px;
+
+    text-align:center;
+}
+
+.achievementIcon{
+    font-size:40px;
+
+    margin-bottom:8px;
+}
+
+.achievement h3{
+    font-size:15px;
+}
+
+.achievement p{
+    color:#9890a2;
+
+    font-size:10px;
+
+    margin-top:5px;
+}
+
+/* =========================================================
+   MEMORY
+========================================================= */
+
+.memoryWall{
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+
+    gap:12px;
+}
+
+.memoryCard{
+    min-height:160px;
+
+    padding:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+}
+
+.memoryCard p{
+    color:#c9c1d2;
+
+    font-size:14px;
+
+    line-height:1.7;
+}
+
+.memoryCard span{
+    color:var(--gold);
+
+    font-size:10px;
+
+    font-weight:900;
+}
+
+/* =========================================================
+   CUTE
+========================================================= */
+
+.cuteGrid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(150px,1fr));
+
+    gap:10px;
+}
+
+.cuteButton{
+    min-height:130px;
+
+    padding:18px;
+
+    color:white;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.07),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid rgba(255,255,255,.09);
+
+    transition:
+        transform .2s,
+        border-color .2s;
+}
+
+.cuteButton:hover{
+    transform:translateY(-5px);
+
+    border-color:
+        rgba(255,120,210,.3);
+}
+
+.cuteButton strong{
+    display:block;
+
+    margin-top:8px;
+
+    font-size:13px;
+}
+
+.cuteButton small{
+    display:block;
+
+    margin-top:5px;
+
+    color:#918a9d;
+
+    font-size:9px;
+}
+
+/* =========================================================
+   LETTER
+========================================================= */
+
+.letter{
+    position:relative;
+
+    max-width:800px;
+
+    margin:auto;
+
+    padding:
+        clamp(25px,6vw,55px);
+
+    overflow:hidden;
+}
+
+.letter::before{
+    content:"✦";
+
+    position:absolute;
+
+    top:10px;
+    right:25px;
+
+    color:var(--pink);
+
+    font-size:75px;
+
+    opacity:.1;
+}
+
+.letter h2{
+    margin-bottom:20px;
+
+    font-size:
+        clamp(30px,7vw,52px);
+}
+
+.letter p{
+    color:#c8c0d2;
+
+    font-size:
+        clamp(15px,3.8vw,18px);
+
+    line-height:2;
+}
+
+.signature{
+    margin-top:25px;
+
+    color:var(--gold);
+
+    font-size:19px;
+
+    font-weight:900;
+}
+
+/* =========================================================
+   GOALS
+========================================================= */
+
+.goalGrid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:14px;
+}
+
+.goalCard{
+    position:relative;
+
+    min-height:250px;
+
+    padding:25px;
+
+    overflow:hidden;
+
+    transition:
+        transform .25s,
+        border-color .25s;
+}
+
+.goalCard:hover{
+    transform:translateY(-5px);
+
+    border-color:
+        rgba(255,215,106,.3);
+}
+
+.goalNumber{
+    position:absolute;
+
+    top:18px;
+    right:20px;
+
+    color:
+        rgba(255,215,106,.35);
+
+    font-size:12px;
+
+    font-weight:1000;
+}
+
+.goalIcon{
+    width:58px;
+    height:58px;
+
+    display:grid;
+    place-items:center;
+
+    margin-bottom:20px;
+
+    border-radius:18px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    font-size:29px;
+}
+
+.goalCard h3{
+    font-size:20px;
+
+    margin-bottom:8px;
+}
+
+.goalCard p{
+    color:#aaa2b4;
+
+    font-size:13px;
+
+    line-height:1.8;
+}
+
+.goalLine{
+    margin-top:20px;
+
+    color:var(--gold);
+
+    font-size:9px;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+}
+
+/* =========================================================
+   PLAYLIST
+========================================================= */
+
+.playlistBox{
+    max-width:850px;
+
+    margin:auto;
+
+    padding:
+        clamp(20px,5vw,35px);
+}
+
+.playlistHeader{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:20px;
+}
+
+.playlistMini{
+    margin-bottom:5px;
+
+    color:var(--gold);
+
+    font-size:9px;
+
+    font-weight:900;
+
+    letter-spacing:3px;
+}
+
+.playlistHeader h3{
+    font-size:
+        clamp(21px,5vw,30px);
+}
+
+.musicDisc{
+    width:60px;
+    height:60px;
+
+    display:grid;
+    place-items:center;
+
+    flex:none;
+
+    border-radius:50%;
+
+    background:
+        conic-gradient(
+            var(--gold),
+            var(--pink),
+            var(--purple),
+            var(--gold)
+        );
+
+    box-shadow:
+        0 0 25px rgba(255,100,190,.15);
+
+    animation:
+        discRotate 8s linear infinite;
+}
+
+@keyframes discRotate{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.songList{
+    display:grid;
+
+    gap:9px;
+}
+
+.songCard{
+    display:grid;
+
+    grid-template-columns:
+        auto 1fr auto;
+
+    align-items:center;
+
+    gap:13px;
+
+    padding:13px;
+
+    border-radius:17px;
+
+    background:
+        rgba(255,255,255,.045);
+
+    border:
+        1px solid rgba(255,255,255,.07);
+
+    transition:
+        transform .2s,
+        background .2s;
+}
+
+.songCard:hover{
+    transform:translateX(4px);
+
+    background:
+        rgba(255,80,190,.055);
+}
+
+.songPlay{
+    width:38px;
+    height:38px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:50%;
+
+    color:#160b18;
+
+    background:var(--gold);
+
+    font-size:11px;
+}
+
+.songInfo strong{
+    display:block;
+
+    font-size:13px;
+}
+
+.songInfo span{
+    display:block;
+
+    margin-top:3px;
+
+    color:#85808f;
+
+    font-size:9px;
+}
+
+.songWave{
+    color:var(--pink);
+
+    font-size:11px;
+
+    letter-spacing:1px;
+}
+
+.playlistButton{
+    width:100%;
+
+    margin-top:17px;
+}
+
+/* =========================================================
+   FUTURE STAGE
+========================================================= */
+
+.futureStage{
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:
+        1fr .8fr;
+
+    gap:20px;
+
+    overflow:hidden;
+
+    padding:
+        clamp(25px,6vw,55px);
+}
+
+.futureGlow{
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    right:-200px;
+    top:-200px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,73,190,.2),
+            rgba(132,72,255,.13),
+            transparent 70%
+        );
+}
+
+.futureContent{
+    position:relative;
+    z-index:2;
+}
+
+.futureContent h2{
+    margin-top:8px;
+
+    font-size:
+        clamp(38px,8vw,70px);
+
+    line-height:1;
+
+    letter-spacing:-3px;
+
+    background:
+        linear-gradient(
+            120deg,
+            white,
+            var(--gold),
+            var(--pink)
+        );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+}
+
+.futureContent p{
+    max-width:560px;
+
+    margin-top:22px;
+
+    color:#aaa2b4;
+
+    font-size:
+        clamp(14px,3.5vw,17px);
+
+    line-height:1.9;
+}
+
+.futureContent p strong{
+    color:#fff;
+}
+
+.futureContent .glowBtn{
+    margin-top:25px;
+}
+
+.futureStageVisual{
+    position:relative;
+
+    min-height:380px;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 25%,
+            rgba(255,215,100,.14),
+            rgba(120,60,220,.1) 40%,
+            transparent 70%
+        );
+}
+
+.stageSpotlight{
+    position:absolute;
+
+    width:220px;
+    height:330px;
+
+    top:-60px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,240,180,.3),
+            rgba(255,200,100,.05),
+            transparent
+        );
+
+    clip-path:
+        polygon(
+            40% 0,
+            60% 0,
+            100% 100%,
+            0 100%
+        );
+
+    animation:
+        spotlight 4s ease-in-out infinite;
+}
+
+@keyframes spotlight{
+
+    0%,100%{
+        opacity:.55;
+    }
+
+    50%{
+        opacity:.9;
+    }
+}
+
+.stageFigure{
+    position:relative;
+
+    z-index:3;
+
+    margin-bottom:65px;
+
+    font-size:120px;
+
+    filter:
+        drop-shadow(
+            0 0 25px rgba(255,215,100,.4)
+        );
+
+    animation:
+        stageMove 2.5s ease-in-out infinite;
+}
+
+@keyframes stageMove{
+
+    0%,100%{
+        transform:
+            rotate(-4deg)
+            translateY(0);
+    }
+
+    50%{
+        transform:
+            rotate(4deg)
+            translateY(-12px);
+    }
+}
+
+.stageFloor{
+    position:absolute;
+
+    bottom:35px;
+
+    left:8%;
+    right:8%;
+
+    height:30px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(255,215,100,.3),
+            transparent 70%
+        );
+}
+
+.stageStars{
+    position:absolute;
+
+    top:30px;
+
+    width:100%;
+
+    text-align:center;
+
+    color:var(--gold);
+
+    opacity:.55;
+
+    letter-spacing:10px;
+}
+
+/* =========================================================
+   FEEDBACK
+========================================================= */
+
+.feedbackBox{
+    max-width:700px;
+
+    margin:auto;
+
+    padding:
+        clamp(22px,6vw,45px);
+}
+
+.stars{
+    display:flex;
+
+    justify-content:center;
+
+    gap:7px;
+
+    margin:15px 0 25px;
+}
+
+.star{
+    color:#484253;
+
+    font-size:36px;
+
+    cursor:pointer;
+
+    transition:
+        color .15s,
+        transform .15s;
+}
+
+.star.active,
+.star:hover{
+    color:var(--gold);
+
+    transform:scale(1.12);
+}
+
+.feedbackChips{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:7px;
+
+    margin-bottom:18px;
+}
+
+.feedbackChip{
+    padding:9px 13px;
+
+    border-radius:100px;
+
+    background:
+        rgba(255,255,255,.05);
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    color:#aaa2b4;
+
+    font-size:9px;
+
+    font-weight:800;
+}
+
+.feedbackChip.selected{
+    color:#171018;
+
+    background:var(--gold);
+
+    border-color:var(--gold);
+}
+
+.feedbackBox textarea{
+    width:100%;
+
+    min-height:130px;
+
+    resize:vertical;
+
+    padding:15px;
+
+    outline:none;
+
+    border-radius:17px;
+
+    color:#fff;
+
+    background:
+        rgba(255,255,255,.045);
+
+    border:
+        1px solid rgba(255,255,255,.1);
+
+    font-size:14px;
+
+    line-height:1.6;
+}
+
+.feedbackThankYou{
+    display:none;
+
+    text-align:center;
+
+    padding:35px 10px;
+}
+
+.feedbackThankYou.show{
+    display:block;
+}
+
+.feedbackThankYou .big{
+    font-size:60px;
+}
+
+/* =========================================================
+   STAGE
+========================================================= */
+
+.stage{
+    position:fixed;
+
+    inset:0;
+
+    z-index:8000;
+
+    display:none;
+
+    place-items:center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(132,66,255,.25),
+            rgba(255,54,175,.08),
+            #030006 75%
+        );
+}
+
+.stage.show{
+    display:grid;
+}
+
+.stageClose{
+    position:absolute;
+
+    top:20px;
+    right:20px;
+
+    width:42px;
+    height:42px;
+
+    z-index:5;
+
+    border-radius:50%;
+
+    color:#fff;
+
+    background:
+        rgba(255,255,255,.08);
+}
+
+.stageContent{
+    padding:20px;
+
+    text-align:center;
+}
+
+.stageTitle{
+    font-size:
+        clamp(35px,9vw,80px);
+
+    font-weight:1000;
+
+    background:
+        linear-gradient(
+            120deg,
+            white,
+            var(--gold),
+            var(--pink)
+        );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+}
+
+.stageCountdown{
+    margin-top:30px;
+
+    font-size:
+        clamp(90px,25vw,220px);
+
+    line-height:1;
+
+    font-weight:1000;
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal{
+    position:fixed;
+
+    inset:0;
+
+    z-index:5000;
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:18px;
+
+    background:
+        rgba(0,0,0,.76);
+
+    backdrop-filter:blur(10px);
+}
+
+.modal.show{
+    display:flex;
+}
+
+.modalCard{
+    width:min(600px,100%);
+
+    max-height:88vh;
+
+    overflow:auto;
+
+    padding:25px;
+
+    border-radius:28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #21132f,
+            #09050e
+        );
+
+    border:
+        1px solid rgba(255,255,255,.13);
+
+    box-shadow:
+        0 35px 90px rgba(0,0,0,.65);
+}
+
+.modalClose{
+    float:right;
+
+    width:34px;
+    height:34px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:50%;
+
+    color:#fff;
+
+    background:
+        rgba(255,255,255,.08);
+}
+
+.modalIcon{
+    margin-top:20px;
+
+    font-size:50px;
+}
+
+.modalCard h2{
+    margin-top:8px;
+
+    font-size:34px;
+}
+
+.modalDescription{
+    margin:10px 0 22px;
+
+    color:#aaa2b4;
+
+    font-size:14px;
+
+    line-height:1.7;
+}
+
+.stepList{
+    display:grid;
+
+    gap:8px;
+}
+
+.step{
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:12px;
+
+    padding:13px;
+
+    border-radius:15px;
+
+    background:
+        rgba(255,255,255,.045);
+
+    border:
+        1px solid rgba(255,255,255,.07);
+
+    cursor:pointer;
+}
+
+.step.selected{
+    border-color:
+        rgba(255,215,106,.4);
+
+    background:
+        rgba(255,215,106,.06);
+}
+
+.stepNum{
+    width:28px;
+    height:28px;
+
+    flex:none;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:9px;
+
+    color:var(--gold);
+
+    background:
+        rgba(255,215,106,.12);
+
+    font-size:10px;
+
+    font-weight:900;
+}
+
+/* =========================================================
+   REVEAL
+========================================================= */
+
+.reveal{
+    opacity:0;
+
+    transform:
+        translate3d(0,20px,0);
+
+    transition:
+        opacity .55s ease,
+        transform .55s ease;
+}
+
+.reveal.visible{
+    opacity:1;
+
+    transform:
+        translate3d(0,0,0);
+}
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.toast{
+    position:fixed;
+
+    left:50%;
+    bottom:25px;
+
+    z-index:10000;
+
+    max-width:90%;
+
+    padding:12px 18px;
+
+    border-radius:100px;
+
+    color:#fff;
+
+    background:
+        rgba(18,5,28,.92);
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    transform:
+        translate(-50%,25px);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:
+        opacity .25s,
+        transform .25s;
+}
+
+.toast.show{
+    opacity:1;
+
+    transform:
+        translate(-50%,0);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    padding:55px 20px 35px;
+
+    text-align:center;
+
+    color:#746b7c;
+
+    font-size:10px;
+
+    letter-spacing:1px;
+}
+
+footer strong{
+    color:#aaa1b4;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:760px){
+
+    section{
+        padding:78px 0;
+    }
+
+    .aiStudio{
+        grid-template-columns:1fr;
+    }
+
+    .goalGrid{
+        grid-template-columns:1fr;
+    }
+
+    .futureStage{
+        grid-template-columns:1fr;
+    }
+
+    .futureStageVisual{
+        min-height:300px;
+    }
+
+    .stageFigure{
+        font-size:100px;
+    }
+
+    .cameraViewport{
+        min-height:500px;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .navbar{
+        width:95%;
+    }
+
+    .logo{
+        font-size:9px;
+    }
+
+    .navLinks button{
+        padding:8px 7px;
+
+        font-size:8px;
+    }
+
+    .navLinks button:nth-child(3){
+        display:none;
+    }
+
+    .hero{
+        padding-top:125px;
+    }
+
+    .heroTitle{
+        letter-spacing:-4px;
+    }
+
+    .danceGrid{
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap:9px;
+    }
+
+    .danceCard{
+        min-height:170px;
+
+        padding:14px;
+    }
+
+    .danceCard h3{
+        font-size:15px;
+    }
+
+    .teacherAvatar{
+        width:155px;
+        height:185px;
+    }
+
+    .songCard{
+        grid-template-columns:
+            auto 1fr;
+    }
+
+    .songWave{
+        display:none;
+    }
+
+    .futureContent h2{
+        font-size:40px;
+
+        letter-spacing:-2px;
+    }
+
+    .futureStageVisual{
+        min-height:280px;
+    }
+
+    .goalCard{
+        min-height:225px;
+    }
+
+}
+
+/* =========================================================
+   REDUCE MOTION FOR DEVICES THAT REQUEST IT
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:.01ms !important;
+        scroll-behavior:auto !important;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     PARTICLES
+========================================================= -->
+
+<div id="particles"></div>
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        <div class="logoIcon">💃</div>
+        NIDHU UNIVERSE
+    </div>
+
+    <div class="navLinks">
+
+        <button onclick="scrollToId('home')">
+            HOME
+        </button>
+
+        <button onclick="scrollToId('danceLibrary')">
+            DANCES
+        </button>
+
+        <button onclick="scrollToId('aiStudio')">
+            AI
+        </button>
+
+        <button onclick="scrollToId('feedback')">
+            FEEDBACK
+        </button>
+
+    </div>
+
+</nav>
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero" id="home">
+
+    <div class="heroBadge">
+        ✦ NIDHU'S PERSONAL DANCE UNIVERSE ✦
+    </div>
+
+    <h1 class="heroTitle">
+        NIDHU<br>
+        <span>DANCE UNIVERSE</span>
+    </h1>
+
+    <p class="heroQuote">
+        “Every beat has a story.<br>
+        Every movement has a little piece of you.”
+    </p>
+
+    <div class="nidhuPhotoFrame">
+
+        <div class="frameGlow"></div>
+
+        <div class="frameOuter">
+
+            <div class="frameInner">
+
+                <img
+                    id="nidhuHeroPhoto"
+                    src="nidhu.jpg"
+                    alt="Nidhu"
+                >
+
+                <div class="photoShine"></div>
+
+                <div class="photoCorner topLeft"></div>
+                <div class="photoCorner topRight"></div>
+                <div class="photoCorner bottomLeft"></div>
+                <div class="photoCorner bottomRight"></div>
+
+            </div>
+
+        </div>
+
+        <div class="photoCaption">
+            <span>✦</span>
+            THE GIRL BEHIND THE RHYTHM
+            <span>✦</span>
+        </div>
+
+    </div>
+
+    <div class="heroButtons">
+
+        <button
+            class="glowBtn primary"
+            onclick="scrollToId('danceLibrary')"
+        >
+            💃 Explore Dance Universe
+        </button>
+
+        <button
+            class="glowBtn secondary"
+            onclick="scrollToId('aiStudio')"
+        >
+            🤖 Enter AI Studio
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     DANCE LIBRARY
+========================================================= -->
+
+<section id="danceLibrary">
+
+<div class="container">
+
+    <div class="sectionHeader reveal">
+
+        <div class="eyebrow">
+            THE LIBRARY
+        </div>
+
+        <h2 class="sectionTitle">
+            Find Your Rhythm
+        </h2>
+
+        <p class="sectionDescription">
+            Classical elegance, Indian energy, cinematic moves,
+            street styles and global dance — all inside one universe.
+        </p>
+
+    </div>
+
+    <div class="filterBar">
+
+        <button
+            class="filterBtn active"
+            onclick="filterDance('All',this)"
+        >
+            ALL
+        </button>
+
+        <button
+            class="filterBtn"
+            onclick="filterDance('Classical',this)"
+        >
+            CLASSICAL
+        </button>
+
+        <button
+            class="filterBtn"
+            onclick="filterDance('Folk',this)"
+        >
+            FOLK
+        </button>
+
+        <button
+            class="filterBtn"
+            onclick="filterDance('Popular',this)"
+        >
+            POPULAR
+        </button>
+
+        <button
+            class="filterBtn"
+            onclick="filterDance('Modern',this)"
+        >
+            MODERN
+        </button>
+
+        <button
+            class="filterBtn"
+            onclick="filterDance('International',this)"
+        >
+            GLOBAL
+        </button>
+
+    </div>
+
+    <div
+        class="danceGrid"
+        id="danceGrid"
+    ></div>
+
+</div>
+
+</section>
+
+<!-- =========================================================
+     AI STUDIO
+========================================================= -->
+
+<section id="aiStudio">
+
+<div class="container">
+
+    <div class="sectionHeader reveal">
+
+        <div class="eyebrow">
+            AI TRAINING STUDIO
+        </div>
+
+        <h2 class="sectionTitle">
+            Dance With Your AI Teacher
+        </h2>
+
+        <p class="sectionDescription">
+            Pick a dance, choose a step and enter an interactive
+            8-count practice session.
+        </p>
+
+    </div>
+
+    <div class="aiStudio">
+
+        <!-- TEACHER -->
+
+        <div class="teacherPanel glass reveal">
+
+            <div class="teacherTop">
+
+                <div class="teacherTitle">
+                    AI Teacher
+                </div>
+
+                <div class="teacherStatus">
+                    ● ONLINE
+                </div>
+
+            </div>
+
+            <div class="teacherAvatarWrap">
+
+                <div
+                    class="teacherAvatar"
+                    id="teacherAvatar"
+                >
+
+                    <div
+                        class="avatarEmoji"
+                        id="avatarEmoji"
+                    >
+                        🧑‍🎤
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div
+                class="teacherMessage"
+                id="teacherMessage"
+            >
+                Hi Nidhu! Ready? Let's dance. 💃✨
+            </div>
+
+            <div class="teacherControls">
+
+                <button
+                    class="smallBtn"
+                    onclick="playTeacher()"
+                >
+                    ▶ Demonstrate
+                </button>
+
+                <button
+                    class="smallBtn"
+                    onclick="randomChallenge()"
+                >
+                    🎲 Challenge
+                </button>
+
+            </div>
+
+            <div style="margin-top:20px">
+
+                <div class="feedbackLabel">
+                    CHOOSE TEACHER
+                </div>
+
+                <div
+                    class="avatarGrid"
+                    id="avatarGrid"
+                ></div>
+
+            </div>
+
+            <div class="uploadBox">
+
+                📸 Upload Teacher Photo
+
+                <input
+                    type="file"
+                    accept="image/*"
+                    onchange="uploadTeacher(event)"
+                >
+
+            </div>
+
+        </div>
+
+        <!-- CAMERA -->
+
+        <div class="cameraPanel glass reveal">
+
+            <div class="cameraViewport">
+
+                <video
+                    id="video"
+                    autoplay
+                    playsinline
+                    muted
+                ></video>
+
+                <div
+                    class="cameraPlaceholder"
+                    id="cameraPlaceholder"
+                >
+
+                    <div class="cameraPlaceholderIcon">
+                        📹
+                    </div>
+
+                    <p>
+                        Start camera to begin AI practice
+                    </p>
+
+                </div>
+
+                <!-- SKELETON -->
+
+                <div
+                    class="aiPoseOverlay"
+                    id="aiPoseOverlay"
+                    style="display:none"
+                >
+
+                    <svg
+                        class="poseSkeleton"
+                        viewBox="0 0 400 600"
+                    >
+
+                        <path
+                            class="bone"
+                            d="M200 105 L200 170 L200 250 L200 330"
+                        />
+
+                        <path
+                            class="bone"
+                            d="M200 150 L145 205 L105 275"
+                        />
+
+                        <path
+                            class="bone"
+                            d="M200 150 L255 205 L295 275"
+                        />
+
+                        <path
+                            class="bone"
+                            d="M200 330 L160 420 L125 535"
+                        />
+
+                        <path
+                            class="bone"
+                            d="M200 330 L240 420 L275 535"
+                        />
+
+                        <path
+                            class="bone thin"
+                            d="M145 150 L255 150"
+                        />
+
+                        <path
+                            class="bone thin"
+                            d="M160 330 L240 330"
+                        />
+
+                    </svg>
+
+                    <div class="joint head"></div>
+
+                    <div class="joint shoulderL"></div>
+                    <div class="joint shoulderR"></div>
+
+                    <div class="joint elbowL"></div>
+                    <div class="joint elbowR"></div>
+
+                    <div class="joint wristL"></div>
+                    <div class="joint wristR"></div>
+
+                    <div class="joint hipL"></div>
+                    <div class="joint hipR"></div>
+
+                    <div class="joint kneeL"></div>
+                    <div class="joint kneeR"></div>
+
+                    <div class="joint ankleL"></div>
+                    <div class="joint ankleR"></div>
+
+                </div>
+
+                <div
+                    class="aiTrackingStatus"
+                    id="trackingStatus"
+                    style="display:none"
+                >
+                    <span class="trackingDot"></span>
+                    AI POSE TRACKING ACTIVE
+                </div>
+
+                <div class="cameraHud">
+
+                    <div class="hudItem">
+
+                        <div
+                            class="hudValue"
+                            id="hudAccuracy"
+                        >
+                            --%
+                        </div>
+
+                        <div class="hudLabel">
+                            Accuracy
+                        </div>
+
+                    </div>
+
+                    <div class="hudItem">
+
+                        <div
+                            class="hudValue"
+                            id="hudMotion"
+                        >
+                            --%
+                        </div>
+
+                        <div class="hudLabel">
+                            Motion
+                        </div>
+
+                    </div>
+
+                    <div class="hudItem">
+
+                        <div
+                            class="hudValue"
+                            id="hudEnergy"
+                        >
+                            --%
+                        </div>
+
+                        <div class="hudLabel">
+                            Energy
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="cameraControls">
+
+                <button
+                    class="glowBtn primary"
+                    id="cameraBtn"
+                    onclick="toggleCamera()"
+                >
+                    📹 Start Camera
+                </button>
+
+                <button
+                    class="glowBtn secondary"
+                    id="recordBtn"
+                    onclick="toggleRecording()"
+                >
+                    🔴 Record
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- COUNT -->
+
+    <div class="countStudio glass reveal">
+
+        <div class="eyebrow">
+            8 COUNT TRAINING
+        </div>
+
+        <div
+            class="countNumber"
+            id="countNumber"
+        >
+            1
+        </div>
+
+        <div
+            class="countInstruction"
+            id="countInstruction"
+        >
+            Start with your basic position.
+        </div>
+
+        <div class="countButtons">
+
+            <button
+                class="smallBtn"
+                onclick="previousCount()"
+            >
+                ← Previous
+            </button>
+
+            <button
+                class="glowBtn primary"
+                onclick="nextCount()"
+            >
+                Next Count →
+            </button>
+
+            <button
+                class="smallBtn"
+                onclick="resetCounts()"
+            >
+                Reset
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="metrics">
+
+        <div class="metric glass">
+
+            <div
+                class="metricValue"
+                id="metricAccuracy"
+            >
+                0%
+            </div>
+
+            <div class="metricName">
+                Pose Accuracy
+            </div>
+
+        </div>
+
+        <div class="metric glass">
+
+            <div
+                class="metricValue"
+                id="metricTiming"
+            >
+                0%
+            </div>
+
+            <div class="metricName">
+                Timing
+            </div>
+
+        </div>
+
+        <div class="metric glass">
+
+            <div
+                class="metricValue"
+                id="metricEnergy"
+            >
+                0%
+            </div>
+
+            <div class="metricName">
+                Energy
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- =========================================================
+     ACHIEVEMENTS
+========================================================= -->
+
+<section>
+
+<div class="container">
+
+    <div class="sectionHeader reveal">
+
+        <div class="eyebrow">
+            YOUR JOURNEY
+        </div>
+
+        <h2 class="sectionTitle">
+            Dance Achievements
+        </h2>
+
+    </div>
+
+    <div class="achievementGrid">
+
+        <div class="achievement glass reveal">
+
+            <div class="achievementIcon">
+                🌱
+            </div>
+
+            <h3>
+                First Step
+            </h3>
+
+            <p>
+                Start your first AI lesson.
+            </p>
+
+        </div>
+
+        <div class="achievement glass reveal">
+
+            <div class="achievementIcon">
+                🔥
+            </div>
+
+            <h3>
+                Rhythm Hunter
+            </h3>
+
+            <p>
+                Practice five different styles.
+            </p>
+
+        </div>
+
+        <div class="achievement glass reveal">
+
+            <div class="achievementIcon">
+                👑
+            </div>
+
+            <h3>
+                Dance Queen
+            </h3>
+
+            <p>
+                Complete your first full session.
+            </p>
+
+        </div>
+
+        <div class="achievement glass reveal">
+
+            <div class="achievementIcon">
+                💫
+            </div>
+
+            <h3>
+                Main Character
+            </h3>
+
+            <p>
+                Enter Stage Mode.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- =========================================================
+     MEMORY WALL
+========================================================= -->
+
+<section>
+
+<div class="container">
+
+    <div class="sectionHeader reveal">
+
+        <div class="eyebrow">
+            MEMORIES
+        </div>
+
+        <h2 class="sectionTitle">
+            Dance Memory Wall
+        </h2>
+
+    </div>
+
+    <div
+        class="memoryWall"
+        id="memoryWall"
+    >
+
+        <div class="memoryCard glass">
+
+            <p>
+                “The first time you danced without thinking
+                about whether anyone was watching.”
+            </p>
+
+            <span>
+                ✦ MEMORY 01
+            </span>
+
+        </div>
+
+        <div class="memoryCard glass">
+
+            <p>
+                “That one song that automatically makes
+                your feet start moving.”
+            </p>
+
+            <span>
+                ✦ MEMORY 02
+            </span>
+
+        </div>
+
+        <div class="memoryCard glass">
+
+            <p>
+                “One day you'll look back and realise
+                how far your dancing came.”
+            </p>
+
+            <span>
+                ✦ MEMORY 03
+            </span>
+
+        </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:20px">
+
+        <button
+            class="glowBtn secondary"
+            onclick="addMemory()"
+        >
+            ＋ Add Dance Memory
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- =========================================================
+     CUTE SECTION
+========================================================= -->
+
+<section>
+
+<div class="container">
+
+    <div class="sectionHeader reveal">
+
+        <div class="eyebrow">
+            SECRET ZONE
+        </div>
+
+        <h2 class="sectionTitle">
+            Just For Nidhu 💕
+        </h2>
+
+    </div>
+
+    <div class="cuteGrid">
+
+        <button
+            class="cuteButton"
+            onclick="secretMessage()"
+        >
+            🔐
+            <strong>
+                Secret Message
+            </strong>
+            <small>
+                Don't open casually.
+            </small>
+        </button>
+
+        <button
+            class="cuteButton"
+            onclick="danceMood()"
+        >
+            💃
+            <strong>
+                Dance Mood
+            </strong>
+            <small>
+                Today's energy?
+            </small>
+        </button>
+
+        <button
+            class="cuteButton"
+            onclick="momosPromise()"
+        >
+            🥹
+            <strong>
+                Momos Promise
+            </strong>
+            <small>
+                Important message.
+            </small>
+        </button>
+
+        <button
+            class="cuteButton"
+            onclick="compliment()"
+        >
+            ✨
+            <strong>
+                Random Compliment
+            </strong>
+            <small>
+                You deserve one.
+            </small>
+        </button>
+
+        <button
+            class="cuteButton"
+            onclick="anthem()"
+        >
+            🎵
+            <strong>
+                Main Character
+            </strong>
+            <small>
+                Activate mode.
+            </small>
+        </button>
+
+        <button
+            class="cuteButton"
+            onclick="loveMeter()"
+        >
+            ❤️
+            <strong>
+                Love Meter
+            </strong>
+            <small>
+                Extremely scientific.
+            </small>
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- =========================================================
+     PERSONAL LETTER
+========================================================= -->
+
+<section>
+
+<div class="container">
+
+    <div class="letter glass reveal">
+
+        <div class="eyebrow">
+            A LITTLE NOTE
+        </div>
+
+        <h2>
+            Dear Nidhu ❤️
+        </h2>
+
+        <p>
+
+            Your dance is honestly something special.
+
+            <br><br>
+
+            You don't have to wait until you're perfect
+            to let people see you dance.
+
+            <br><br>
+
+            Keep learning.
+            Keep experimenting.
+            Keep enjoying every beat.
+
+            <br><br>
+
+            There will always be people who don't understand
+            what you love.
+
+            <br><br>
+
+            Let them.
+
+            <br><br>
+
+            Your job is simply to keep dancing.
+
+            <br><br>
+
+            One day you'll watch an old video of yourself
+            and realise how far you've come.
+
+            <br><br>
+
+            So don't stop.
+
+            <br><br>
+
+            The rhythm belongs to you.
+
+        </p>
+
+        <div class="signature">
+            Your Momos 🥹❤️
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- =========================================================
+     STAGE BUTTON
+========================================================= -->
+
+<section>
+
+<div class="container">
+
+    <div
+        class="glass reveal"
+        style="
+            padding:45px 25px;
+            text-align:center;
+        "
+    >
+
+        <div class="eyebrow">
+            PERFORMANCE MODE
+        </div>
+
+        <h2 class="sectionTitle">
+            Own The Stage
+        </h2>
+
+        <p class="sectionDescription">
+            No teacher. No instructions.
+            Just you, the music and the stage.
+        </p>
+
+        <button
+            class="glowBtn primary"
+            style="margin-top:22px"
+            onclick="openStage()"
+        >
+            🎭 Enter Stage Mode
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- =========================================================
+     FEEDBACK
+========================================================= -->
+
+<section id="feedback">
+
+<div class="container">
+
+    <div class="sectionHeader reveal">
+
+        <div class="eyebrow">
+            LAST THING
+        </div>
+
+        <h2 class="sectionTitle">
+            Tell Me What You Think ❤️
+        </h2>
+
+        <p class="sectionDescription">
+            This website was made for you.
+            Your opinion matters.
+        </p>
+
+    </div>
+
+    <div class="feedbackBox glass">
+
+        <div class="feedbackLabel">
+            RATE THE WEBSITE
+        </div>
+
+        <div class="stars">
+
+            <span
+                class="star"
+                data-rating="1"
+                onclick="selectRating(1)"
+            >★</span>
+
+            <span
+                class="star"
+                data-rating="2"
+                onclick="selectRating(2)"
+            >★</span>
+
+            <span
+                class="star"
+                data-rating="3"
+                onclick="selectRating(3)"
+            >★</span>
+
+            <span
+                class="star"
+                data-rating="4"
+                onclick="selectRating(4)"
+            >★</span>
+
+            <span
+                class="star"
+                data-rating="5"
+                onclick="selectRating(5)"
+            >★</span>
+
+        </div>
+
+        <div class="feedbackLabel">
+            WHAT SHOULD I IMPROVE?
+        </div>
+
+        <div class="feedbackChips">
+
+            <button
+                class="feedbackChip"
+                onclick="selectFeedbackChip(this)"
+            >
+                🎨 Design
+            </button>
+
+            <button
+                class="feedbackChip"
+                onclick="selectFeedbackChip(this)"
+            >
+                💃 Dance Features
+            </button>
+
+            <button
+                class="feedbackChip"
+                onclick="selectFeedbackChip(this)"
+            >
+                🤖 AI
+            </button>
+
+            <button
+                class="feedbackChip"
+                onclick="selectFeedbackChip(this)"
+            >
+                📱 Mobile
+            </button>
+
+            <button
+                class="feedbackChip"
+                onclick="selectFeedbackChip(this)"
+            >
+                🎵 Music
+            </button>
+
+            <button
+                class="feedbackChip"
+                onclick="selectFeedbackChip(this)"
+            >
+                ✨ More Features
+            </button>
+
+            <button
+                class="feedbackChip"
+                onclick="selectFeedbackChip(this)"
+            >
+                ❤️ Personalization
+            </button>
+
+        </div>
+
+        <div class="feedbackLabel">
+            YOUR THOUGHTS
+        </div>
+
+        <textarea
+            id="feedbackText"
+            placeholder="Tell me honestly... what should I add, remove or change?"
+        ></textarea>
+
+        <button
+            class="glowBtn primary"
+            style="
+                width:100%;
+                margin-top:15px;
+            "
+            onclick="submitNidhuFeedback()"
+        >
+            💌 Send Feedback
+        </button>
+
+        <div
+            class="feedbackThankYou"
+            id="feedbackThankYou"
+        >
+
+            <div class="big">
+                🥹❤️
+            </div>
+
+            <h2>
+                Thank you, Nidhu.
+            </h2>
+
+            <p
+                style="
+                    color:#aaa2b4;
+                    margin-top:8px;
+                    font-size:13px;
+                "
+            >
+                Your feedback has been saved on this device.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- =========================================================
+     NEW SECTION 1 — GOALS
+========================================================= -->
+
+<section>
+
+<div class="container">
+
+    <div class="sectionHeader reveal">
+
+        <div class="eyebrow">
+            THE JOURNEY AHEAD
+        </div>
+
+        <h2 class="sectionTitle">
+            Nidhu's Dance Goals 🌟
+        </h2>
+
+        <p class="sectionDescription">
+            Every dancer starts with one step.
+            These are the steps waiting for you.
+        </p>
+
+    </div>
+
+    <div class="goalGrid">
+
+        <div class="goalCard glass reveal">
+
+            <div class="goalNumber">
+                01
+            </div>
+
+            <div class="goalIcon">
+                💃
+            </div>
+
+            <h3>
+                Master More Styles
+            </h3>
+
+            <p>
+                Explore classical, folk, cinematic,
+                contemporary and international dance.
+            </p>
+
+            <div class="goalLine">
+                KEEP LEARNING ✦
+            </div>
+
+        </div>
+
+        <div class="goalCard glass reveal">
+
+            <div class="goalNumber">
+                02
+            </div>
+
+            <div class="goalIcon">
+                🎭
+            </div>
+
+            <h3>
+                Own The Stage
+            </h3>
+
+            <p>
+                Dance with confidence and perform
+                without worrying about who is watching.
+            </p>
+
+            <div class="goalLine">
+                KEEP PERFORMING ✦
+            </div>
+
+        </div>
+
+        <div class="goalCard glass reveal">
+
+            <div class="goalNumber">
+                03
+            </div>
+
+            <div class="goalIcon">
+                👑
+            </div>
+
+            <h3>
+                Find Your Signature
+            </h3>
+
+            <p>
+                Don't just copy choreography.
+                Create movements that feel completely you.
+            </p>
+
+            <div class="goalLine">
+                BE YOURSELF ✦
+            </div>
+
+        </div>
+
+        <div class="goalCard glass reveal">
+
+            <div class="goalNumber">
+                04
+            </div>
+
+            <div class="goalIcon">
+                🌎
+            </div>
+
+            <h3>
+                Dance Everywhere
+            </h3>
+
+            <p>
+                From a small room to a huge stage,
+                let your dancing travel with you.
+            </p>
+
+            <div class="goalLine">
+                DREAM BIG ✦
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- =========================================================
+     NEW SECTION 2 — PLAYLIST
+========================================================= -->
+
+<section>
+
+<div class="container">
+
+    <div class="sectionHeader reveal">
+
+        <div class="eyebrow">
+            PRESS PLAY
+        </div>
+
+        <h2 class="sectionTitle">
+            Dance Playlist 🎵
+        </h2>
+
+        <p class="sectionDescription">
+            Sometimes one song is all it takes
+            to turn an ordinary moment into a dance floor.
+        </p>
+
+    </div>
+
+    <div class="playlistBox glass reveal">
+
+        <div class="playlistHeader">
+
+            <div>
+
+                <div class="playlistMini">
+                    NIDHU'S MIX
+                </div>
+
+                <h3>
+                    Songs That Make You Move
+                </h3>
+
+            </div>
+
+            <div class="musicDisc">
+                🎵
+            </div>
+
+        </div>
+
+        <div class="songList">
+
+            <div class="songCard">
+
+                <div class="songPlay">
+                    ▶
+                </div>
+
+                <div class="songInfo">
+
+                    <strong>
+                        Your Ultimate Dance Song
+                    </strong>
+
+                    <span>
+                        The one that makes you
+                        automatically start moving.
+                    </span>
+
+                </div>
+
+                <div class="songWave">
+                    ▂▅▃▇▅▂▆
+                </div>
+
+            </div>
+
+            <div class="songCard">
+
+                <div class="songPlay">
+                    ▶
+                </div>
+
+                <div class="songInfo">
+
+                    <strong>
+                        Main Character Track
+                    </strong>
+
+                    <span>
+                        For those moments when
+                        the whole world feels like a stage.
+                    </span>
+
+                </div>
+
+                <div class="songWave">
+                    ▃▆▅▇▂▅▆
+                </div>
+
+            </div>
+
+            <div class="songCard">
+
+                <div class="songPlay">
+                    ▶
+                </div>
+
+                <div class="songInfo">
+
+                    <strong>
+                        Confidence Mode
+                    </strong>
+
+                    <span>
+                        Put this on when you need
+                        a little extra energy.
+                    </span>
+
+                </div>
+
+                <div class="songWave">
+                    ▅▃▇▆▂▆▅
+                </div>
+
+            </div>
+
+            <div class="songCard">
+
+                <div class="songPlay">
+                    ▶
+                </div>
+
+                <div class="songInfo">
+
+                    <strong>
+                        Just Dance
+                    </strong>
+
+                    <span>
+                        No choreography. No rules.
+                        Just vibes.
+                    </span>
+
+                </div>
+
+                <div class="songWave">
+                    ▂▆▅▃▇▅▂
+                </div>
+
+            </div>
+
+        </div>
+
+        <button
+            class="glowBtn primary"
+            style="
+                width:100%;
+                margin-top:17px;
+            "
+            onclick="playlistMessage()"
+        >
+            🎧 Start Dance Mood
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- =========================================================
+     NEW SECTION 3 — FUTURE STAGE
+========================================================= -->
+
+<section>
+
+<div class="container">
+
+    <div class="futureStage glass reveal">
+
+        <div class="futureGlow"></div>
+
+        <div class="futureContent">
+
+            <div class="eyebrow">
+                ONE DAY
+            </div>
+
+            <h2>
+                The Stage Is Waiting.
+            </h2>
+
+            <p>
+
+                Maybe one day there will be a huge stage,
+                thousands of lights and hundreds of people
+                watching.
+
+                <br><br>
+
+                And you'll still remember the girl who
+                simply started dancing because she loved it.
+
+                <br><br>
+
+                Keep learning.
+                Keep practising.
+                Keep creating.
+
+                <br><br>
+
+                <strong>
+                    Your next chapter hasn't even started yet.
+                </strong>
+
+            </p>
+
+            <button
+                class="glowBtn primary"
+                onclick="futureStageMessage()"
+            >
+                👑 I WILL KEEP DANCING
+            </button>
+
+        </div>
+
+        <div class="futureStageVisual">
+
+            <div class="stageSpotlight"></div>
+
+            <div class="stageStars">
+                ✦　✧　✦　✧　✦
+            </div>
+
+            <div class="stageFigure">
+                💃
+            </div>
+
+            <div class="stageFloor"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <strong>
+        NIDHU DANCE UNIVERSE
+    </strong>
+
+    <br><br>
+
+    Made with rhythm, madness and a little too much love. 💃✨
+
+    <br><br>
+
+    © 2026 — For Nidhu ❤️
+
+</footer>
+
+<!-- =========================================================
+     DANCE MODAL
+========================================================= -->
+
+<div
+    class="modal"
+    id="danceModal"
+    onclick="closeModal(event)"
+>
+
+    <div
+        class="modalCard"
+        onclick="event.stopPropagation()"
+    >
+
+        <button
+            class="modalClose"
+            onclick="closeModal()"
+        >
+            ✕
+        </button>
+
+        <div
+            class="modalIcon"
+            id="modalIcon"
+        >
+            💃
+        </div>
+
+        <h2 id="modalTitle">
+            Dance
+        </h2>
+
+        <p
+            class="modalDescription"
+            id="modalDescription"
+        ></p>
+
+        <div class="feedbackLabel">
+            CHOOSE A STEP
+        </div>
+
+        <div
+            class="stepList"
+            id="stepList"
+        ></div>
+
+        <button
+            class="glowBtn primary"
+            style="
+                width:100%;
+                margin-top:20px;
+            "
+            onclick="modalStartLesson()"
+        >
+            🤖 Start AI Lesson
+        </button>
+
+    </div>
+
+</div>
+
+<!-- =========================================================
+     STAGE
+========================================================= -->
+
+<div
+    class="stage"
+    id="stage"
+>
+
+    <button
+        class="stageClose"
+        onclick="closeStage()"
+    >
+        ✕
+    </button>
+
+    <div class="stageContent">
+
+        <div class="eyebrow">
+            NIDHU PERFORMANCE
+        </div>
+
+        <div class="stageTitle">
+            OWN THE STAGE
+        </div>
+
+        <div
+            class="stageCountdown"
+            id="stageCountdown"
+        >
+            3
+        </div>
+
+        <p
+            id="stageText"
+            style="
+                color:#aaa2b4;
+                font-size:13px;
+            "
+        >
+            Get ready...
+        </p>
+
+    </div>
+
+</div>
+
+<!-- =========================================================
+     TOAST
+========================================================= -->
+
+<div
+    class="toast"
+    id="toast"
+></div>
+
+<script>
+
+/* =========================================================
+   LIGHT PARTICLES
+========================================================= */
+
+const particleContainer =
+    document.getElementById("particles");
+
+for(let i=0;i<30;i++){
+
+    const p =
+        document.createElement("div");
+
+    p.className="particle";
+
+    p.style.left =
+        Math.random()*100+"%";
+
+    p.style.animationDuration =
+        (10+Math.random()*10)+"s";
+
+    p.style.animationDelay =
+        (-Math.random()*15)+"s";
+
+    particleContainer.appendChild(p);
+}
+
+/* =========================================================
+   DANCE DATA
+========================================================= */
+
+const dances=[
+
+{
+name:"Bharatanatyam",
+icon:"🪷",
+category:"Classical",
+accent:"#ffb74d",
+bpm:90,
+description:"Powerful classical movement built around rhythm, expressions and precise geometry.",
+steps:[
+"Samapadam — establish your posture",
+"Aramandi — bend into the classical stance",
+"Extend the arms with control",
+"Use expressive eyes",
+"Finish with a clean rhythmic pose"
+]
+},
+
+{
+name:"Kathak",
+icon:"💫",
+category:"Classical",
+accent:"#e5a9ff",
+bpm:110,
+description:"Elegant spins, rhythmic footwork and storytelling.",
+steps:[
+"Stand tall",
+"Begin rhythmic foot taps",
+"Coordinate hand gestures",
+"Practice a controlled chakkar",
+"Finish facing the audience"
+]
+},
+
+{
+name:"Kuchipudi",
+icon:"🌸",
+category:"Classical",
+accent:"#ff9fcf",
+bpm:100,
+description:"Expressive Indian classical dance with graceful movement.",
+steps:[
+"Prepare your stance",
+"Move through graceful patterns",
+"Coordinate hand gestures",
+"Add expressions",
+"Finish with balance"
+]
+},
+
+{
+name:"Odissi",
+icon:"🌺",
+category:"Classical",
+accent:"#ff7fa8",
+bpm:85,
+description:"Sculptural poses and graceful torso movements.",
+steps:[
+"Establish Chowka",
+"Practice Tribhangi",
+"Move the torso",
+"Coordinate eyes and hands",
+"Hold the final sculpture"
+]
+},
+
+{
+name:"Mohiniyattam",
+icon:"🌼",
+category:"Classical",
+accent:"#ffd76a",
+bpm:78,
+description:"Soft, graceful and flowing movement.",
+steps:[
+"Relax shoulders",
+"Shift weight",
+"Create flowing arms",
+"Use soft expressions",
+"Finish gracefully"
+]
+},
+
+{
+name:"Manipuri",
+icon:"🌙",
+category:"Classical",
+accent:"#bfa3ff",
+bpm:82,
+description:"Gentle circular movement with delicate expression.",
+steps:[
+"Soft posture",
+"Circular movement",
+"Coordinate arms",
+"Light footwork",
+"Smooth finish"
+]
+},
+
+{
+name:"Sattriya",
+icon:"🪔",
+category:"Classical",
+accent:"#ffbf6e",
+bpm:88,
+description:"Assamese classical dance combining rhythm and storytelling.",
+steps:[
+"Establish posture",
+"Practice footwork",
+"Add hand gestures",
+"Introduce expression",
+"Strong finish"
+]
+},
+
+{
+name:"Kathakali",
+icon:"🎭",
+category:"Classical",
+accent:"#66e8ff",
+bpm:75,
+description:"Dramatic storytelling through powerful expressions.",
+steps:[
+"Prepare stance",
+"Practice eye movement",
+"Add expressions",
+"Coordinate gestures",
+"Hold dramatic finish"
+]
+},
+
+{
+name:"Garba",
+icon:"🪩",
+category:"Folk",
+accent:"#ff8bc7",
+bpm:125,
+description:"Energetic circular Gujarati folk dancing.",
+steps:[
+"Step right",
+"Step left",
+"Clap",
+"Turn",
+"Repeat"
+]
+},
+
+{
+name:"Dandiya",
+icon:"🥢",
+category:"Folk",
+accent:"#ffd35c",
+bpm:130,
+description:"Fast rhythmic movement using traditional sticks.",
+steps:[
+"Set stance",
+"Step forward",
+"Strike",
+"Turn",
+"Return"
+]
+},
+
+{
+name:"Bhangra",
+icon:"🔥",
+category:"Folk",
+accent:"#ff6c7f",
+bpm:135,
+description:"High-energy Punjabi dance.",
+steps:[
+"Raise arms",
+"Bounce",
+"Lift foot",
+"Move shoulders",
+"Finish high"
+]
+},
+
+{
+name:"Lavani",
+icon:"💃",
+category:"Folk",
+accent:"#ff799e",
+bpm:120,
+description:"Expressive Maharashtrian folk dance.",
+steps:[
+"Set stance",
+"Move hips",
+"Hand gesture",
+"Expressive eyes",
+"Confident finish"
+]
+},
+
+{
+name:"Ghoomar",
+icon:"🌹",
+category:"Folk",
+accent:"#e9a1ff",
+bpm:100,
+description:"Graceful Rajasthani circular movement.",
+steps:[
+"Prepare",
+"Step sideways",
+"Turn",
+"Open arms",
+"Spin"
+]
+},
+
+{
+name:"Bihu",
+icon:"🌿",
+category:"Folk",
+accent:"#7effb7",
+bpm:128,
+description:"Energetic Assamese folk movement.",
+steps:[
+"Basic stance",
+"Rhythmic step",
+"Shoulders",
+"Hands",
+"Celebration"
+]
+},
+
+{
+name:"Koli",
+icon:"🌊",
+category:"Folk",
+accent:"#65dfff",
+bpm:115,
+description:"Energetic coastal folk dance.",
+steps:[
+"Walking rhythm",
+"Coordinate arms",
+"Side steps",
+"Rowing motion",
+"Finish"
+]
+},
+
+{
+name:"Bollywood",
+icon:"🎬",
+category:"Popular",
+accent:"#ff73bb",
+bpm:120,
+description:"Big expressions, cinematic energy and personality.",
+steps:[
+"Find beat",
+"Signature hand move",
+"Shoulders",
+"Turn",
+"Attitude finish"
+]
+},
+
+{
+name:"Tamil Cinema",
+icon:"🔥",
+category:"Popular",
+accent:"#ff8b5c",
+bpm:128,
+description:"High-energy South Indian cinema style.",
+steps:[
+"Hero stance",
+"Shoulders",
+"Hand gesture",
+"Footwork",
+"Mass finish"
+]
+},
+
+{
+name:"Telugu Cinema",
+icon:"⚡",
+category:"Popular",
+accent:"#ffce55",
+bpm:125,
+description:"Powerful cinematic choreography.",
+steps:[
+"Start strong",
+"Shoulders",
+"Hands",
+"Footwork",
+"Hero finish"
+]
+},
+
+{
+name:"Freestyle",
+icon:"✨",
+category:"Popular",
+accent:"#b38cff",
+bpm:115,
+description:"No rules. Just music and personality.",
+steps:[
+"Listen",
+"Move naturally",
+"Change direction",
+"Add your move",
+"Finish"
+]
+},
+
+{
+name:"Fusion",
+icon:"🌌",
+category:"Popular",
+accent:"#65eaff",
+bpm:110,
+description:"Blend styles and create something yours.",
+steps:[
+"Choose two styles",
+"Start style one",
+"Transition",
+"Introduce style two",
+"Signature ending"
+]
+},
+
+{
+name:"Hip-Hop",
+icon:"🎧",
+category:"Modern",
+accent:"#65e8ff",
+bpm:105,
+description:"Grooves, bounce and attitude.",
+steps:[
+"Find groove",
+"Bounce",
+"Body roll",
+"Hit accent",
+"Freeze"
+]
+},
+
+{
+name:"Contemporary",
+icon:"🌙",
+category:"Modern",
+accent:"#b9a0ff",
+bpm:85,
+description:"Emotion-driven movement with flow.",
+steps:[
+"Start grounded",
+"Create wave",
+"Shift weight",
+"Release",
+"Finish softly"
+]
+},
+
+{
+name:"Jazz",
+icon:"🎷",
+category:"Modern",
+accent:"#ffd56a",
+bpm:118,
+description:"Sharp lines, musicality and expression.",
+steps:[
+"Posture",
+"Step",
+"Sharp arms",
+"Turn",
+"Pose"
+]
+},
+
+{
+name:"Breaking",
+icon:"🌀",
+category:"Modern",
+accent:"#ff6f8f",
+bpm:120,
+description:"Explosive street movement.",
+steps:[
+"Toprock",
+"Footwork",
+"Change direction",
+"Freeze preparation",
+"Freeze"
+]
+},
+
+{
+name:"Popping",
+icon:"⚡",
+category:"Modern",
+accent:"#66f4ff",
+bpm:105,
+description:"Isolation, hits and robotic control.",
+steps:[
+"Relax",
+"Hit",
+"Arm isolation",
+"Wave",
+"Freeze"
+]
+},
+
+{
+name:"Locking",
+icon:"🔒",
+category:"Modern",
+accent:"#ffe071",
+bpm:115,
+description:"Playful locks and exaggerated movement.",
+steps:[
+"Groove",
+"Point",
+"Lock",
+"Open",
+"Pose"
+]
+},
+
+{
+name:"Waacking",
+icon:"💫",
+category:"Modern",
+accent:"#ff7ed0",
+bpm:125,
+description:"Fast expressive arm patterns.",
+steps:[
+"Arms",
+"Swing",
+"Direction",
+"Hit",
+"Pose"
+]
+},
+
+{
+name:"K-Pop",
+icon:"💜",
+category:"Modern",
+accent:"#a98cff",
+bpm:120,
+description:"Precise choreography with sharp movement.",
+steps:[
+"Count",
+"Hit position",
+"Move sharply",
+"Change",
+"Signature ending"
+]
+},
+
+{
+name:"Salsa",
+icon:"🔥",
+category:"International",
+accent:"#ff6d76",
+bpm:180,
+description:"Fast Latin rhythm.",
+steps:[
+"Basic",
+"Side",
+"Turn",
+"Cross-body",
+"Finish"
+]
+},
+
+{
+name:"Bachata",
+icon:"❤️",
+category:"International",
+accent:"#ff8ea6",
+bpm:125,
+description:"Smooth Latin movement.",
+steps:[
+"Side step",
+"Weight transfer",
+"Hip accent",
+"Turn",
+"Pose"
+]
+},
+
+{
+name:"Tango",
+icon:"🥀",
+category:"International",
+accent:"#ff7f7f",
+bpm:120,
+description:"Sharp elegant movement.",
+steps:[
+"Walk",
+"Pause",
+"Direction",
+"Turn",
+"Hold"
+]
+},
+
+{
+name:"House",
+icon:"🏠",
+category:"International",
+accent:"#6ce9ff",
+bpm:125,
+description:"Fast footwork and fluid movement.",
+steps:[
+"Jack",
+"Footwork",
+"Direction",
+"Groove",
+"Freeze"
+]
+},
+
+{
+name:"Dancehall",
+icon:"🌴",
+category:"International",
+accent:"#77ffb9",
+bpm:100,
+description:"Energetic Caribbean-inspired movement.",
+steps:[
+"Groove",
+"Hips",
+"Bounce",
+"Change level",
+"Finish"
+]
+},
+
+{
+name:"Shuffle",
+icon:"👟",
+category:"International",
+accent:"#b58aff",
+bpm:128,
+description:"Fast footwork and travelling movement.",
+steps:[
+"Running man",
+"T-step",
+"Switch",
+"Travel",
+"Final hit"
+]
+}
+
+];
+
+/* =========================================================
+   DANCE RENDER
+========================================================= */
+
+const danceGrid=
+    document.getElementById("danceGrid");
+
+let currentDance=dances[0];
+
+function renderDances(category="All"){
+
+    danceGrid.innerHTML="";
+
+    const list=
+        dances.filter(
+            d =>
+                category==="All" ||
+                d.category===category
+        );
+
+    list.forEach((dance,index)=>{
+
+        const card=
+            document.createElement("div");
+
+        card.className=
+            "danceCard reveal";
+
+        card.style.setProperty(
+            "--accent",
+            dance.accent
+        );
+
+        card.innerHTML=`
+
+            <div class="danceIcon">
+                ${dance.icon}
+            </div>
+
+            <h3>
+                ${dance.name}
+            </h3>
+
+            <div class="danceCategory">
+                ${dance.category}
+            </div>
+
+            <div class="danceBpm">
+                ${dance.bpm} BPM
+            </div>
+
+        `;
+
+        card.onclick=()=>{
+
+            premiumHaptic();
+
+            selectDance(dance);
+
+        };
+
+        danceGrid.appendChild(card);
+
+        requestAnimationFrame(
+            ()=>{
+                card.classList.add("visible");
+            }
+        );
+
+    });
+
+}
+
+function filterDance(category,button){
+
+    document
+    .querySelectorAll(".filterBtn")
+    .forEach(
+        b=>b.classList.remove("active")
+    );
+
+    button.classList.add("active");
+
+    renderDances(category);
+}
+
+function selectDance(dance){
+
+    currentDance=dance;
+
+    openDanceModal(dance);
+}
+
+renderDances();
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+let selectedStep=0;
+
+function openDanceModal(dance){
+
+    document
+    .getElementById("modalIcon")
+    .textContent=dance.icon;
+
+    document
+    .getElementById("modalTitle")
+    .textContent=dance.name;
+
+    document
+    .getElementById("modalDescription")
+    .textContent=dance.description;
+
+    const list=
+        document.getElementById("stepList");
+
+    list.innerHTML="";
+
+    dance.steps.forEach(
+        (step,index)=>{
+
+            const el=
+                document.createElement("div");
+
+            el.className=
+                "step"+
+                (index===0?
+                    " selected":
+                    "");
+
+            el.innerHTML=`
+
+                <div class="stepNum">
+                    ${index+1}
+                </div>
+
+                <div>
+                    ${step}
+                </div>
+
+            `;
+
+            el.onclick=()=>{
+
+                document
+                .querySelectorAll(".step")
+                .forEach(
+                    x=>
+                    x.classList.remove(
+                        "selected"
+                    )
+                );
+
+                el.classList.add("selected");
+
+                selectedStep=index;
+
+                premiumHaptic();
+
+            };
+
+            list.appendChild(el);
+
+        }
+    );
+
+    document
+    .getElementById("danceModal")
+    .classList.add("show");
+}
+
+function closeModal(event){
+
+    if(
+        event &&
+        event.target !==
+        document.getElementById("danceModal")
+    ){
+        return;
+    }
+
+    document
+    .getElementById("danceModal")
+    .classList.remove("show");
+}
+
+function modalStartLesson(){
+
+    closeModal();
+
+    scrollToId("aiStudio");
+
+    setTimeout(()=>{
+
+        document
+        .getElementById("teacherMessage")
+        .textContent=
+            `${currentDance.name} selected. Let's master Step ${selectedStep+1}! 💃🔥`;
+
+        showToast(
+            `${currentDance.name} lesson ready!`
+        );
+
+    },350);
+
+}
+
+/* =========================================================
+   AVATARS
+========================================================= */
+
+const avatars=[
+    "🧑‍🎤",
+    "👩‍🎤",
+    "🧑‍🎨",
+    "👩‍🚀",
+    "🧝‍♀️",
+    "🧚‍♀️",
+    "🕺",
+    "💃"
+];
+
+const avatarGrid=
+    document.getElementById("avatarGrid");
+
+avatars.forEach(
+    (avatar,index)=>{
+
+        const button=
+            document.createElement("button");
+
+        button.className=
+            "avatarChoice"+
+            (
+                index===0?
+                " selected":
+                ""
+            );
+
+        button.textContent=avatar;
+
+        button.onclick=()=>{
+
+            document
+            .querySelectorAll(
+                ".avatarChoice"
+            )
+            .forEach(
+                x=>
+                x.classList.remove(
+                    "selected"
+                )
+            );
+
+            button.classList.add(
+                "selected"
+            );
+
+            document
+            .getElementById("avatarEmoji")
+            .textContent=avatar;
+
+            document
+            .getElementById("teacherAvatar")
+            .style.backgroundImage="";
+
+            document
+            .getElementById("avatarEmoji")
+            .style.display="block";
+
+            premiumHaptic();
+
+        };
+
+        avatarGrid.appendChild(button);
+
+    }
+);
+
+function uploadTeacher(event){
+
+    const file=
+        event.target.files[0];
+
+    if(!file)return;
+
+    const reader=
+        new FileReader();
+
+    reader.onload=e=>{
+
+        const teacher=
+            document.getElementById(
+                "teacherAvatar"
+            );
+
+        teacher.style.backgroundImage=
+            `url("${e.target.result}")`;
+
+        teacher.style.backgroundSize=
+            "cover";
+
+        teacher.style.backgroundPosition=
+            "center";
+
+        document
+        .getElementById("avatarEmoji")
+        .style.display="none";
+
+        showToast(
+            "Teacher photo uploaded ✨"
+        );
+
+    };
+
+    reader.readAsDataURL(file);
+
+    premiumHaptic();
+}
+
+/* =========================================================
+   TEACHER
+========================================================= */
+
+function playTeacher(){
+
+    const avatar=
+        document.getElementById(
+            "teacherAvatar"
+        );
+
+    avatar.animate(
+        [
+            {
+                transform:
+                    "rotate(-3deg) translateY(0)"
+            },
+            {
+                transform:
+                    "rotate(4deg) translateY(-10px)"
+            },
+            {
+                transform:
+                    "rotate(-3deg) translateY(0)"
+            }
+        ],
+        {
+            duration:900,
+            iterations:3
+        }
+    );
+
+    document
+    .getElementById("teacherMessage")
+    .textContent=
+        "Watch carefully... now you try! 👀✨";
+
+    showToast(
+        "AI teacher demonstration ▶"
+    );
+
+    premiumHaptic();
+}
+
+function randomChallenge(){
+
+    const random=
+        dances[
+            Math.floor(
+                Math.random()*dances.length
+            )
+        ];
+
+    currentDance=random;
+
+    document
+    .getElementById("teacherMessage")
+    .textContent=
+        `Challenge: ${random.name}! Show me what you've got. 🔥`;
+
+    showToast(
+        `Challenge: ${random.name}`
+    );
+
+    premiumHaptic();
+}
+
+/* =========================================================
+   CAMERA
+========================================================= */
+
+let cameraStream=null;
+
+let mediaRecorder=null;
+
+let recordedChunks=[];
+
+let analysisTimer=null;
+
+const video=
+    document.getElementById("video");
+
+async function startCamera(){
+
+    try{
+
+        cameraStream=
+            await navigator
+            .mediaDevices
+            .getUserMedia({
+                video:{
+                    facingMode:"user",
+                    width:{ideal:1280},
+                    height:{ideal:720}
+                },
+                audio:true
+            });
+
+        video.srcObject=
+            cameraStream;
+
+        document
+        .getElementById(
+            "cameraPlaceholder"
+        )
+        .style.display="none";
+
+        document
+        .getElementById(
+            "cameraBtn"
+        )
+        .textContent=
+            "⏹ Stop Camera";
+
+        document
+        .getElementById(
+            "aiPoseOverlay"
+        )
+        .style.display="block";
+
+        document
+        .getElementById(
+            "trackingStatus"
+        )
+        .style.display="block";
+
+        startAIAnalysis();
+
+        showToast(
+            "Camera connected ✨"
+        );
+
+        premiumHaptic();
+
+    }catch(error){
+
+        showToast(
+            "Camera permission is required."
+        );
+
+        console.error(error);
+
+    }
+
+}
+
+function stopCamera(){
+
+    if(
+        mediaRecorder &&
+        mediaRecorder.state==="recording"
+    ){
+
+        mediaRecorder.stop();
+
+    }
+
+    if(cameraStream){
+
+        cameraStream
+        .getTracks()
+        .forEach(
+            track=>track.stop()
+        );
+
+        cameraStream=null;
+
+    }
+
+    video.srcObject=null;
+
+    document
+    .getElementById(
+        "cameraPlaceholder"
+    )
+    .style.display="flex";
+
+    document
+    .getElementById(
+        "cameraBtn"
+    )
+    .textContent=
+        "📹 Start Camera";
+
+    document
+    .getElementById(
+        "aiPoseOverlay"
+    )
+    .style.display="none";
+
+    document
+    .getElementById(
+        "trackingStatus"
+    )
+    .style.display="none";
+
+    stopAIAnalysis();
+
+}
+
+function toggleCamera(){
+
+    if(cameraStream){
+
+        stopCamera();
+
+    }else{
+
+        startCamera();
+
+    }
+
+}
+
+/* =========================================================
+   DEMO AI
+========================================================= */
+
+function randomScore(min,max){
+
+    return Math.floor(
+        min+
+        Math.random()*
+        (max-min+1)
+    );
+
+}
+
+function startAIAnalysis(){
+
+    updateMetrics();
+
+    analysisTimer=
+        setInterval(
+            updateMetrics,
+            1100
+        );
+
+}
+
+function stopAIAnalysis(){
+
+    clearInterval(
+        analysisTimer
+    );
+
+    document
+    .getElementById("hudAccuracy")
+    .textContent="--%";
+
+    document
+    .getElementById("hudMotion")
+    .textContent="--%";
+
+    document
+    .getElementById("hudEnergy")
+    .textContent="--%";
+
+}
+
+function updateMetrics(){
+
+    const accuracy=
+        randomScore(76,98);
+
+    const timing=
+        randomScore(72,97);
+
+    const energy=
+        randomScore(68,99);
+
+    document
+    .getElementById("hudAccuracy")
+    .textContent=
+        accuracy+"%";
+
+    document
+    .getElementById("hudMotion")
+    .textContent=
+        timing+"%";
+
+    document
+    .getElementById("hudEnergy")
+    .textContent=
+        energy+"%";
+
+    document
+    .getElementById("metricAccuracy")
+    .textContent=
+        accuracy+"%";
+
+    document
+    .getElementById("metricTiming")
+    .textContent=
+        timing+"%";
+
+    document
+    .getElementById("metricEnergy")
+    .textContent=
+        energy+"%";
+
+}
+
+/* =========================================================
+   RECORDING
+========================================================= */
+
+function toggleRecording(){
+
+    if(
+        mediaRecorder &&
+        mediaRecorder.state==="recording"
+    ){
+
+        stopRecording();
+
+    }else{
+
+        startRecording();
+
+    }
+
+}
+
+function startRecording(){
+
+    if(!cameraStream){
+
+        showToast(
+            "Start the camera first."
+        );
+
+        return;
+
+    }
+
+    recordedChunks=[];
+
+    let options={};
+
+    if(
+        MediaRecorder.isTypeSupported(
+            "video/webm;codecs=vp9"
+        )
+    ){
+
+        options={
+            mimeType:
+                "video/webm;codecs=vp9"
+        };
+
+    }else if(
+        MediaRecorder.isTypeSupported(
+            "video/webm"
+        )
+    ){
+
+        options={
+            mimeType:"video/webm"
+        };
+
+    }
+
+    try{
+
+        mediaRecorder=
+            new MediaRecorder(
+                cameraStream,
+                options
+            );
+
+    }catch(e){
+
+        mediaRecorder=
+            new MediaRecorder(
+                cameraStream
+            );
+
+    }
+
+    mediaRecorder.ondataavailable=
+        e=>{
+
+            if(e.data.size>0){
+
+                recordedChunks.push(
+                    e.data
+                );
+
+            }
+
+        };
+
+    mediaRecorder.onstop=
+        downloadRecording;
+
+    mediaRecorder.start();
+
+    document
+    .getElementById("recordBtn")
+    .textContent=
+        "⏹ Stop Recording";
+
+    showToast(
+        "Recording started 🔴"
+    );
+
+    premiumHaptic();
+
+}
+
+function stopRecording(){
+
+    if(
+        mediaRecorder &&
+        mediaRecorder.state==="recording"
+    ){
+
+        mediaRecorder.stop();
+
+        document
+        .getElementById("recordBtn")
+        .textContent=
+            "🔴 Record";
+
+        showToast(
+            "Recording finished 🎥"
+        );
+
+    }
+
+}
+
+function downloadRecording(){
+
+    if(!recordedChunks.length)
+        return;
+
+    const blob=
+        new Blob(
+            recordedChunks,
+            {type:"video/webm"}
+        );
+
+    const url=
+        URL.createObjectURL(blob);
+
+    const a=
+        document.createElement("a");
+
+    a.href=url;
+
+    a.download=
+        "nidhu-dance-session.webm";
+
+    a.click();
+
+    setTimeout(
+        ()=>{
+            URL.revokeObjectURL(url);
+        },
+        1000
+    );
+
+}
+
+/* =========================================================
+   COUNT
+========================================================= */
+
+let currentCount=1;
+
+const countInstructions=[
+
+"Start with your basic position.",
+
+"Shift your weight smoothly.",
+
+"Move your right arm with the beat.",
+
+"Bring the left side into the movement.",
+
+"Add your main dance step.",
+
+"Increase the energy.",
+
+"Prepare your transition.",
+
+"Hit the final pose."
+
+];
+
+function updateCount(){
+
+    document
+    .getElementById("countNumber")
+    .textContent=
+        currentCount;
+
+    document
+    .getElementById("countInstruction")
+    .textContent=
+        countInstructions[
+            currentCount-1
+        ];
+
+    teacherPulse();
+
+    premiumHaptic();
+
+}
+
+function nextCount(){
+
+    currentCount++;
+
+    if(currentCount>8){
+
+        currentCount=1;
+
+        showToast(
+            "8-count complete! 🔥"
+        );
+
+    }
+
+    updateCount();
+
+}
+
+function previousCount(){
+
+    currentCount--;
+
+    if(currentCount<1)
+        currentCount=8;
+
+    updateCount();
+
+}
+
+function resetCounts(){
+
+    currentCount=1;
+
+    updateCount();
+
+}
+
+function teacherPulse(){
+
+    const avatar=
+        document.getElementById(
+            "teacherAvatar"
+        );
+
+    avatar.animate(
+        [
+            {
+                transform:"scale(1)"
+            },
+            {
+                transform:"scale(1.05)"
+            },
+            {
+                transform:"scale(1)"
+            }
+        ],
+        {
+            duration:350
+        }
+    );
+
+}
+
+/* =========================================================
+   STAGE
+========================================================= */
+
+function openStage(){
+
+    document
+    .getElementById("stage")
+    .classList.add("show");
+
+    startStageCountdown();
+
+    premiumHaptic();
+
+}
+
+function closeStage(){
+
+    document
+    .getElementById("stage")
+    .classList.remove("show");
+
+}
+
+function startStageCountdown(){
+
+    let count=3;
+
+    const display=
+        document.getElementById(
+            "stageCountdown"
+        );
+
+    const text=
+        document.getElementById(
+            "stageText"
+        );
+
+    display.textContent=count;
+
+    const timer=
+        setInterval(
+            ()=>{
+
+                count--;
+
+                if(count>0){
+
+                    display.textContent=
+                        count;
+
+                    premiumHaptic();
+
+                }else{
+
+                    clearInterval(timer);
+
+                    display.textContent=
+                        "GO!";
+
+                    text.textContent=
+                        "Dance like nobody is watching. ✨";
+
+                    setTimeout(
+                        ()=>{
+                            text.textContent=
+                                "That stage was yours. 👑";
+                        },
+                        4000
+                    );
+
+                }
+
+            },
+            1000
+        );
+
+}
+
+/* =========================================================
+   MEMORY
+========================================================= */
+
+function addMemory(){
+
+    const memory=
+        prompt(
+            "Write a dance memory for Nidhu:"
+        );
+
+    if(!memory)
+        return;
+
+    const card=
+        document.createElement("div");
+
+    card.className=
+        "memoryCard glass";
+
+    card.innerHTML=`
+
+        <p>
+            “${escapeHTML(memory)}”
+        </p>
+
+        <span>
+            ✦ NEW MEMORY
+        </span>
+
+    `;
+
+    document
+    .getElementById("memoryWall")
+    .appendChild(card);
+
+    showToast(
+        "Memory added ❤️"
+    );
+
+}
+
+function escapeHTML(text){
+
+    const div=
+        document.createElement("div");
+
+    div.textContent=text;
+
+    return div.innerHTML;
+
+}
+
+/* =========================================================
+   CUTE INTERACTIONS
+========================================================= */
+
+function secretMessage(){
+
+    showToast(
+        "Psst... you're probably more talented than you realise. 🥹❤️"
+    );
+
+}
+
+function danceMood(){
+
+    const moods=[
+
+        "Today: Main Character Energy 👑",
+
+        "Today: Bollywood Mode 💃",
+
+        "Today: Classical Queen 🪷",
+
+        "Today: Full Mass Mode 🔥",
+
+        "Today: Contemporary Soul 🌙",
+
+        "Today: K-Pop Star 💜"
+
+    ];
+
+    showToast(
+        moods[
+            Math.floor(
+                Math.random()*moods.length
+            )
+        ]
+    );
+
+}
+
+function momosPromise(){
+
+    showToast(
+        "Promise: keep dancing even when nobody is clapping. ❤️"
+    );
+
+}
+
+function compliment(){
+
+    const compliments=[
+
+        "Your smile deserves its own spotlight. ✨",
+
+        "Your dance energy is seriously addictive. 🔥",
+
+        "You make movement look effortless. 💃",
+
+        "You have your own kind of rhythm. ❤️",
+
+        "Main character detected. 👑"
+
+    ];
+
+    showToast(
+        compliments[
+            Math.floor(
+                Math.random()*compliments.length
+            )
+        ]
+    );
+
+}
+
+function anthem(){
+
+    document
+    .querySelector(".heroTitle")
+    .animate(
+        [
+            {
+                transform:"scale(1)"
+            },
+            {
+                transform:"scale(1.04)"
+            },
+            {
+                transform:"scale(1)"
+            }
+        ],
+        {
+            duration:600
+        }
+    );
+
+    showToast(
+        "MAIN CHARACTER MODE ACTIVATED 👑🔥"
+    );
+
+    premiumHaptic();
+
+}
+
+function loveMeter(){
+
+    showToast(
+        "Love Meter: 1000000% ❤️🥹"
+    );
+
+}
+
+/* =========================================================
+   FEEDBACK
+========================================================= */
+
+let selectedRating=0;
+
+let selectedFeedback=[];
+
+function selectRating(rating){
+
+    selectedRating=rating;
+
+    document
+    .querySelectorAll(".star")
+    .forEach(
+        star=>{
+
+            const value=
+                Number(
+                    star.dataset.rating
+                );
+
+            star.classList.toggle(
+                "active",
+                value<=rating
+            );
+
+        }
+    );
+
+    premiumHaptic();
+
+}
+
+function selectFeedbackChip(chip){
+
+    chip.classList.toggle(
+        "selected"
+    );
+
+    const value=
+        chip.textContent.trim();
+
+    if(
+        selectedFeedback.includes(value)
+    ){
+
+        selectedFeedback=
+            selectedFeedback.filter(
+                x=>x!==value
+            );
+
+    }else{
+
+        selectedFeedback.push(value);
+
+    }
+
+    premiumHaptic();
+
+}
+
+function submitNidhuFeedback(){
+
+    const text=
+        document
+        .getElementById(
+            "feedbackText"
+        )
+        .value
+        .trim();
+
+    if(!selectedRating){
+
+        showToast(
+            "Please give the website a rating ⭐"
+        );
+
+        return;
+
+    }
+
+    const feedback={
+
+        rating:selectedRating,
+
+        categories:
+            selectedFeedback,
+
+        message:text,
+
+        date:
+            new Date().toISOString()
+
+    };
+
+    localStorage.setItem(
+        "nidhuDanceFeedback",
+        JSON.stringify(feedback)
+    );
+
+    document
+    .getElementById(
+        "feedbackThankYou"
+    )
+    .classList.add("show");
+
+    document
+    .querySelector(
+        ".feedbackBox > .feedbackLabel"
+    )
+    .style.display="none";
+
+    document
+    .querySelector(
+        ".stars"
+    )
+    .style.display="none";
+
+    document
+    .querySelector(
+        ".feedbackChips"
+    )
+    .style.display="none";
+
+    document
+    .getElementById(
+        "feedbackText"
+    )
+    .style.display="none";
+
+    document
+    .querySelector(
+        ".feedbackBox > .glowBtn"
+    )
+    .style.display="none";
+
+    showToast(
+        "Feedback saved ❤️"
+    );
+
+    premiumHaptic();
+
+}
+
+/* =========================================================
+   NEW SECTION INTERACTIONS
+========================================================= */
+
+function playlistMessage(){
+
+    const messages=[
+
+        "🎧 Volume up. World off. Dance on.",
+
+        "💃 One song. One room. Zero hesitation.",
+
+        "🔥 Main character playlist activated.",
+
+        "✨ The floor is yours, Nidhu.",
+
+        "🎵 If your feet start moving, don't blame me."
+
+    ];
+
+    showToast(
+        messages[
+            Math.floor(
+                Math.random()*messages.length
+            )
+        ]
+    );
+
+    premiumHaptic();
+
+}
+
+function futureStageMessage(){
+
+    showToast(
+        "👑 One day, that stage is going to know your name."
+    );
+
+    premiumHaptic();
+
+    const stage=
+        document.querySelector(
+            ".futureStage"
+        );
+
+    stage.animate(
+        [
+            {
+                transform:"scale(1)"
+            },
+            {
+                transform:"scale(1.015)"
+            },
+            {
+                transform:"scale(1)"
+            }
+        ],
+        {
+            duration:600
+        }
+    );
+
+}
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealObserver=
+    new IntersectionObserver(
+        entries=>{
+
+            entries.forEach(
+                entry=>{
+
+                    if(
+                        entry.isIntersecting
+                    ){
+
+                        entry.target
+                        .classList
+                        .add("visible");
+
+                        revealObserver
+                        .unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                }
+            );
+
+        },
+        {
+            threshold:.08
+        }
+    );
+
+document
+.querySelectorAll(".reveal")
+.forEach(
+    el=>
+    revealObserver.observe(el)
+);
+
+/* =========================================================
+   HAPTIC
+========================================================= */
+
+function premiumHaptic(){
+
+    if(
+        "vibrate" in navigator
+    ){
+
+        navigator.vibrate(8);
+
+    }
+
+}
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+let toastTimer;
+
+function showToast(message){
+
+    const toast=
+        document.getElementById(
+            "toast"
+        );
+
+    toast.textContent=message;
+
+    toast.classList.add("show");
+
+    clearTimeout(toastTimer);
+
+    toastTimer=
+        setTimeout(
+            ()=>{
+                toast.classList.remove(
+                    "show"
+                );
+            },
+            2600
+        );
+
+}
+
+/* =========================================================
+   SCROLL
+========================================================= */
+
+function scrollToId(id){
+
+    const el=
+        document.getElementById(id);
+
+    if(el){
+
+        el.scrollIntoView({
+            behavior:"smooth",
+            block:"start"
+        });
+
+    }
+
+}
+
+/* =========================================================
+   KEYBOARD
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    event=>{
+
+        if(
+            event.key==="ArrowRight"
+        ){
+            nextCount();
+        }
+
+        if(
+            event.key==="ArrowLeft"
+        ){
+            previousCount();
+        }
+
+        if(
+            event.code==="Space" &&
+            document.activeElement.tagName!=="TEXTAREA" &&
+            document.activeElement.tagName!=="INPUT"
+        ){
+
+            event.preventDefault();
+
+            nextCount();
+
+        }
+
+        if(
+            event.key==="Escape"
+        ){
+
+            closeStage();
+
+            document
+            .getElementById(
+                "danceModal"
+            )
+            .classList.remove(
+                "show"
+            );
+
+        }
+
+    }
+);
+
+/* =========================================================
+   BUTTON RIPPLE
+========================================================= */
+
+document.addEventListener(
+    "click",
+    event=>{
+
+        const button=
+            event.target.closest(
+                "button"
+            );
+
+        if(!button)
+            return;
+
+        button.animate(
+            [
+                {
+                    transform:"scale(1)"
+                },
+                {
+                    transform:"scale(.97)"
+                },
+                {
+                    transform:"scale(1)"
+                }
+            ],
+            {
+                duration:160
+            }
+        );
+
+    }
+);
+
+/* =========================================================
+   WELCOME
+========================================================= */
+
+setTimeout(
+    ()=>{
+        showToast(
+            "Welcome to Nidhu Dance Universe 💜💗"
+        );
+    },
+    900
+);
+
+</script>
+
+</body>
+</html>
